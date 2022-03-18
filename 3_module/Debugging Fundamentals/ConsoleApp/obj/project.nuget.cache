@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EEh/o4hp0xp9QPHyjpfksXGylJ2+4ETNV/urx306mzGTYGChU7Y0FDXG9NgFa4XReyxEb+++QTs1Ew3OZwTIPg==",
+  "dgSpecHash": "9Zo9EGBUZpMoWORBb/Vztq5QkVo1vaJmBL57igIsj/qx+Ez8YJ3bPVdyUZ6v+kX5DbjNC3UczVsh2paYJDWYUw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\ConsoleApp\\ConsoleApp.csproj",
+  "projectFilePath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\ConsoleApp\\ConsoleApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gulzada_Kakhar\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",
     "C:\\Users\\Gulzada_Kakhar\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

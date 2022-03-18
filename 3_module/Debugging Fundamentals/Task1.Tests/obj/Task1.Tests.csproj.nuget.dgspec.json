@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\Task1.Tests\\Task1.Tests.csproj": {}
+    "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\Task1.Tests\\Task1.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\Task1.Tests\\Task1.Tests.csproj": {
+    "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\Task1.Tests\\Task1.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\Task1.Tests\\Task1.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\Task1.Tests\\Task1.Tests.csproj",
         "projectName": "Task1.Tests",
-        "projectPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\Task1.Tests\\Task1.Tests.csproj",
+        "projectPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\Task1.Tests\\Task1.Tests.csproj",
         "packagesPath": "C:\\Users\\Gulzada_Kakhar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\Task1.Tests\\obj\\",
+        "outputPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\Task1.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gulzada_Kakhar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\Task1\\Task1.csproj": {
-                "projectPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\Task1\\Task1.csproj"
+              "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\Task1\\Task1.csproj": {
+                "projectPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\Task1\\Task1.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\Task1\\Task1.csproj": {
+    "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\Task1\\Task1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\Task1\\Task1.csproj",
+        "projectUniqueName": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\Task1\\Task1.csproj",
         "projectName": "Task1",
-        "projectPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\Task1\\Task1.csproj",
+        "projectPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\Task1\\Task1.csproj",
         "packagesPath": "C:\\Users\\Gulzada_Kakhar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\2_module\\Debugging Fundamentals\\Task1\\obj\\",
+        "outputPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\3_module\\Debugging Fundamentals\\Task1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gulzada_Kakhar\\AppData\\Roaming\\NuGet\\NuGet.Config",

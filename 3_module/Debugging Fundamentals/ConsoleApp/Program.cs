@@ -10,6 +10,10 @@ namespace ConsoleApp
         {
             Tests tests = new Tests();
             tests.IndexOf_Products_ReturnsTwo();
+
+            int[] numbers = new[] { 4, 2, 1, 3, -5 };
+
+            Utilities.Sort(numbers);
         }
     }
 }
