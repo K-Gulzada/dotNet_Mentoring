@@ -11,7 +11,7 @@ namespace ConsoleApp.Test
     {
         private readonly FileSystemVisitor _visitor;
         private readonly FileSystemVisitor _visitorWithFilter;
-        private readonly string _path = "C:\\Users\\Gulzada_Kakhar\\Desktop";
+        private string _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         Predicate<string> _predicate = (info) => info.Contains("xm");
 
         public FileSystemVisitorTest()
@@ -30,7 +30,7 @@ namespace ConsoleApp.Test
 
             // Act
             IEnumerable<string> actualFiles = _visitor.VisitFiles(_path);
-
+          
             // Assert
             Assert.AreEqual(expectedFiles, actualFiles);
         }
@@ -53,10 +53,7 @@ namespace ConsoleApp.Test
         {
             Assert.That(() =>
             {
-                string? path = null;
-                Predicate<string> predicate = (info) => info.Contains("xm");
-
-                var productToFind = new FileSystemVisitor(path, predicate);
+                var result = new FileSystemVisitor(null, _predicate);
             }, Throws.InstanceOf<ArgumentNullException>());
         }
 
@@ -66,9 +63,8 @@ namespace ConsoleApp.Test
             Assert.That(() =>
             {
                 string path = "C:\\Users\\Gulzada_Kakhar\\Desktop\\DoesNotExistFolder";
-                Predicate<string> predicate = (info) => info.Contains("xm");
 
-                var productToFind = new FileSystemVisitor(path, predicate);
+                var result = new FileSystemVisitor(path, _predicate);
             }, Throws.InstanceOf<DirectoryNotFoundException>());
         }
 
@@ -77,10 +73,7 @@ namespace ConsoleApp.Test
         {
             Assert.That(() =>
             {
-                string path = "C:\\Users\\Gulzada_Kakhar\\Desktop";
-                Predicate<string> predicate = null;
-
-                var productToFind = new FileSystemVisitor(path, predicate);
+                var result = new FileSystemVisitor(_path, null);
             }, Throws.InstanceOf<ArgumentNullException>());
         }
 

@@ -44,13 +44,21 @@ namespace ConsoleApp
             var message = _flag ? "Filtered File Found" : "File Found";
             ProcessStatus?.Invoke(message);
 
+            int counter = 0;
+
             foreach (var filePath in Directory.EnumerateFiles(root))
             {
                 if (_filter(filePath))
                 {
                     var file = filePath.Split('\\');
                     yield return file[file.Length - 1];
+                    counter++;
                 }
+            }
+
+            if(counter == 0)
+            {
+                ProcessStatus?.Invoke("Nothing had been found");
             }
 
             foreach (var item in VisitDirectory(root))
@@ -64,15 +72,22 @@ namespace ConsoleApp
             var message = _flag ? "Filtered Folder Found" : "Folder Found";
             ProcessStatus?.Invoke(message);
 
+            int counter = 0;
+
             foreach (var subDirectory in Directory.EnumerateDirectories(root))
             {
                 var directory = subDirectory.Split('\\');
                 if (_filter(directory[directory.Length - 1]))
                 {
                     yield return directory[directory.Length - 1];
+                    counter++;
                 }
             }
 
+            if (counter == 0)
+            {
+                ProcessStatus?.Invoke("Nothing had been found");
+            }
             ProcessStatus?.Invoke("Process Finished");
         }
 
