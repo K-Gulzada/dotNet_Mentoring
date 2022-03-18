@@ -30,7 +30,7 @@ namespace ConsoleApp.Test
 
             // Act
             IEnumerable<string> actualFiles = _visitor.VisitFiles(_path);
-          
+
             // Assert
             Assert.AreEqual(expectedFiles, actualFiles);
         }
@@ -62,7 +62,7 @@ namespace ConsoleApp.Test
         {
             Assert.That(() =>
             {
-                string path = "C:\\Users\\Gulzada_Kakhar\\Desktop\\DoesNotExistFolder";
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\DoesNotExistFolder";
 
                 var result = new FileSystemVisitor(path, _predicate);
             }, Throws.InstanceOf<DirectoryNotFoundException>());
