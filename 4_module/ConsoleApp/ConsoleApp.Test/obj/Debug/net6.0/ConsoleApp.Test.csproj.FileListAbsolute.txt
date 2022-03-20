@@ -105,3 +105,5 @@ C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\Conso
 C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp.Test\obj\Debug\net6.0\ref\ConsoleApp.Test.dll
 C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp.Test\bin\Debug\net6.0\Castle.Core.dll
 C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp.Test\bin\Debug\net6.0\Moq.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp.Test\bin\Debug\net6.0\System.IO.Abstractions.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp.Test\bin\Debug\net6.0\System.IO.Abstractions.TestingHelpers.dll

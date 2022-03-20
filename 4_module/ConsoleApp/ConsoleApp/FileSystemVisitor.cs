@@ -37,62 +37,175 @@ namespace ConsoleApp
             _flag = true;
         }
 
-        public IEnumerable<string> VisitFiles(string root)
+        public virtual IEnumerable<string> GetFilesAndFolders(string root)
         {
             ProcessStatus?.Invoke("Process Started");
-
-            var message = _flag ? "Filtered File Found" : "File Found";
-            ProcessStatus?.Invoke(message);
-
-            int counter = 0;
-
-            foreach (var filePath in Directory.EnumerateFiles(root))
+            foreach (var item in VisitFiles(root))
             {
-                if (_filter(filePath))
-                {
-                    var file = filePath.Split('\\');
-                    yield return file[file.Length - 1];
-                    counter++;
-                }
-            }
-
-            if(counter == 0)
-            {
-                ProcessStatus?.Invoke("Nothing had been found");
+                yield return item;
             }
 
             foreach (var item in VisitDirectory(root))
             {
                 yield return item;
             }
+            ProcessStatus?.Invoke("Process Finished");
         }
 
-        private IEnumerable<string> VisitDirectory(string root)
-        {
-            var message = _flag ? "Filtered Folder Found" : "Folder Found";
-            ProcessStatus?.Invoke(message);
 
+        private List<string> VisitFiles(string root)
+        {
             int counter = 0;
+            var fileList = new List<string>();
+
+            foreach (var filePath in Directory.EnumerateFiles(root))
+            {
+                if (_filter(filePath))
+                {
+                    var file = filePath.Split('\\');
+                    fileList.Add(file[file.Length - 1]);
+                    counter++;
+
+                    // SimulateSearchAbort();
+                }
+            }
+
+            ProcessStatus?.Invoke(GetStatusMessage("file", counter));
+            return fileList;
+        }
+
+        private List<string> VisitDirectory(string root)
+        {
+            int counter = 0;
+            var dirList = new List<string>();
 
             foreach (var subDirectory in Directory.EnumerateDirectories(root))
             {
                 var directory = subDirectory.Split('\\');
                 if (_filter(directory[directory.Length - 1]))
                 {
-                    yield return directory[directory.Length - 1];
+                    dirList.Add(directory[directory.Length - 1]);
                     counter++;
+                    // SimulateSearchAbort();
                 }
             }
 
+            ProcessStatus?.Invoke(GetStatusMessage("folder", counter));
+            return dirList;
+        }
+
+        private string GetStatusMessage(string type, int counter)
+        {
+            string message = String.Empty;
+
             if (counter == 0)
             {
-                ProcessStatus?.Invoke("Nothing had been found");
+                message = $"No {type} was found";
             }
-            ProcessStatus?.Invoke("Process Finished");
+            else
+            {
+                if (type.ToLower() == "file")
+                {
+                    message = _flag ? "Filtered File Found" : "File Found";
+                }
+                if (type.ToLower() == "folder")
+                {
+                    message = _flag ? "Filtered Folder Found" : "Folder Found";
+                }
+            }
+
+            return message;
+        }
+
+        /*  public virtual IEnumerable<string> VisitFiles(string root)
+          {
+              ProcessStatus?.Invoke("Process Started");
+
+              ProcessStatus?.Invoke(GetStatusMessage("file"));
+
+              int counter = 0;
+
+              foreach (var filePath in Directory.EnumerateFiles(root))
+              {
+                  if (_filter(filePath))
+                  {
+                      var file = filePath.Split('\\');
+                      yield return file[file.Length - 1];
+                      counter++;
+
+                      SimulateSearchAbort();
+                  }
+
+              }
+
+              if (counter == 0)
+              {
+                  ProcessStatus?.Invoke("Nothing had been found");
+              }
+
+              foreach (var item in VisitDirectory(root))
+              {
+                  yield return item;
+              }
+          }*/
+
+        /* private IEnumerable<string> VisitDirectory(string root)
+         {
+             ProcessStatus?.Invoke(GetStatusMessage("folder"));
+
+             int counter = 0;
+
+             foreach (var subDirectory in Directory.EnumerateDirectories(root))
+             {
+                 var directory = subDirectory.Split('\\');
+                 if (_filter(directory[directory.Length - 1]))
+                 {
+                     yield return directory[directory.Length - 1];
+                     counter++;
+                     SimulateSearchAbort();
+                 }
+             }
+
+             if (counter == 0)
+             {
+                 ProcessStatus?.Invoke("Nothing had been found");
+             }
+             ProcessStatus?.Invoke("Process Finished");
+         }*/
+
+        /*  private string GetStatusMessage(string type)
+          {
+              string message=String.Empty;
+
+              if(type.ToLower() == "file")
+              {
+                  message = _flag ? "Filtered File Found" : "File Found";
+              }
+              if(type.ToLower() == "folder")
+              {
+                  message = _flag ? "Filtered Folder Found" : "Folder Found";
+              }            
+
+              return message;
+          }*/
+
+        private void SimulateSearchAbort()
+        {
+            var rnd = new Random();
+            if (rnd.Next(0, 15) == 0)
+            {
+                Thread.Sleep(5000);
+                ProcessStatus?.Invoke("Search aborted");
+                Environment.Exit(422);
+            }
+            else
+            {
+                return;
+            }
         }
 
         #region IfYouWantToGetAllFilesFromFolders
-        public IEnumerable<string> GetAllFIles(string root)
+        private IEnumerable<string> GetAllFIles(string root)
         {
             foreach (var subDirectory in Directory.EnumerateDirectories(root))
             {

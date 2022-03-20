@@ -677,6 +677,27 @@
           "ref/netstandard1.5/System.IO.dll": {}
         }
       },
+      "System.IO.Abstractions/16.1.23": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.IO.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/System.IO.Abstractions.dll": {}
+        }
+      },
+      "System.IO.Abstractions.TestingHelpers/16.1.23": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Abstractions": "16.1.23"
+        },
+        "compile": {
+          "lib/net6.0/System.IO.Abstractions.TestingHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/System.IO.Abstractions.TestingHelpers.dll": {}
+        }
+      },
       "System.IO.FileSystem/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1081,6 +1102,10 @@
       "ConsoleApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "System.IO.Abstractions": "16.1.23",
+          "System.IO.Abstractions.TestingHelpers": "16.1.23"
+        },
         "compile": {
           "bin/placeholder/ConsoleApp.dll": {}
         },
@@ -2799,6 +2824,52 @@
         "ref/xamarinwatchos10/_._",
         "system.io.4.3.0.nupkg.sha512",
         "system.io.nuspec"
+      ]
+    },
+    "System.IO.Abstractions/16.1.23": {
+      "sha512": "I3wVtPHa4v9l5k2QLO+9SmdBG6qsLZZkmn5TWSX+R/S/RIoGq9HQXDRvYT+i3z/s72i0ZTF6Z0kh+pvF6N+0SQ==",
+      "type": "package",
+      "path": "system.io.abstractions/16.1.23",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon_256x256.png",
+        "lib/net461/System.IO.Abstractions.dll",
+        "lib/net461/System.IO.Abstractions.xml",
+        "lib/net5.0/System.IO.Abstractions.dll",
+        "lib/net5.0/System.IO.Abstractions.xml",
+        "lib/net6.0/System.IO.Abstractions.dll",
+        "lib/net6.0/System.IO.Abstractions.xml",
+        "lib/netstandard2.0/System.IO.Abstractions.dll",
+        "lib/netstandard2.0/System.IO.Abstractions.xml",
+        "lib/netstandard2.1/System.IO.Abstractions.dll",
+        "lib/netstandard2.1/System.IO.Abstractions.xml",
+        "system.io.abstractions.16.1.23.nupkg.sha512",
+        "system.io.abstractions.nuspec"
+      ]
+    },
+    "System.IO.Abstractions.TestingHelpers/16.1.23": {
+      "sha512": "tiiYnc5SZhZFJmid62G8Lh5hvlEWnxEILLRBcv4YO/CLRKVv4itOFeMg57/Bt53EGzXpCairDaBphijeuPfRUw==",
+      "type": "package",
+      "path": "system.io.abstractions.testinghelpers/16.1.23",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon_256x256.png",
+        "lib/net461/System.IO.Abstractions.TestingHelpers.dll",
+        "lib/net461/System.IO.Abstractions.TestingHelpers.xml",
+        "lib/net5.0/System.IO.Abstractions.TestingHelpers.dll",
+        "lib/net5.0/System.IO.Abstractions.TestingHelpers.xml",
+        "lib/net6.0/System.IO.Abstractions.TestingHelpers.dll",
+        "lib/net6.0/System.IO.Abstractions.TestingHelpers.xml",
+        "lib/netstandard2.0/System.IO.Abstractions.TestingHelpers.dll",
+        "lib/netstandard2.0/System.IO.Abstractions.TestingHelpers.xml",
+        "lib/netstandard2.1/System.IO.Abstractions.TestingHelpers.dll",
+        "lib/netstandard2.1/System.IO.Abstractions.TestingHelpers.xml",
+        "system.io.abstractions.testinghelpers.16.1.23.nupkg.sha512",
+        "system.io.abstractions.testinghelpers.nuspec"
       ]
     },
     "System.IO.FileSystem/4.3.0": {
@@ -4524,6 +4595,7 @@
       "Moq >= 4.17.2",
       "NUnit >= 3.13.2",
       "NUnit3TestAdapter >= 4.0.0",
+      "System.IO.Abstractions.TestingHelpers >= 16.1.23",
       "coverlet.collector >= 3.1.0"
     ]
   },
@@ -4585,6 +4657,10 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[4.0.0, )"
+          },
+          "System.IO.Abstractions.TestingHelpers": {
+            "target": "Package",
+            "version": "[16.1.23, )"
           },
           "coverlet.collector": {
             "target": "Package",

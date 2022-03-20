@@ -3,49 +3,27 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Abstractions.TestingHelpers;
 
 namespace ConsoleApp.Test
 {
     [TestFixture]
     public class FileSystemVisitorTest
     {
-        private readonly FileSystemVisitor _visitor;
-        private readonly FileSystemVisitor _visitorWithFilter;
-        private string _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        private string _path = "C:\\";
         Predicate<string> _predicate = (info) => info.Contains("xm");
-
-        public FileSystemVisitorTest()
-        {
-            _visitor = new FileSystemVisitor(_path);
-            _visitorWithFilter = new FileSystemVisitor(_path, _predicate);
-        }
 
         [Test]
         public void VisitFiles_Return_AllFiles()
         {
-            // Arrange
-            IEnumerable<string> expectedFiles = new[] { "EPAM Toolkit.url", "Microsoft Teams.lnk", "Net Mentoring.docx",
-                                                 "test.xml", "Visual Studio Code.lnk", ".Net Mentoring Program",
-                                                "CitrixWorkspaceAppWeb_1912CU5", "New folder", "Projectsxm" };
+            IEnumerable<string> actualFiles = new[] { "C:\\test.txt", "C:\\config.xml" };
 
-            // Act
-            IEnumerable<string> actualFiles = _visitor.VisitFiles(_path);
+            var mockFileIO = new Mock<FileSystemVisitor>(_path);
+            mockFileIO.Setup(t => t.GetFilesAndFolders(It.IsAny<string>())).Returns(actualFiles);
+            var myFiles = mockFileIO.Object.GetFilesAndFolders(_path);             
 
-            // Assert
-            Assert.AreEqual(expectedFiles, actualFiles);
-        }
-
-        [Test]
-        public void VisitFiles_Return_FilteredFiles()
-        {
-            // Arrange
-            IEnumerable<string> expectedFiles = new[] { "test.xml", "Projectsxm" };
-
-            // Act
-            IEnumerable<string> actualFiles = _visitorWithFilter.VisitFiles(_path);
-
-            // Assert
-            Assert.AreEqual(expectedFiles, actualFiles);
+            Assert.IsNotNull(myFiles);
+            Assert.AreEqual(myFiles, actualFiles);
         }
 
         [Test]
@@ -62,7 +40,7 @@ namespace ConsoleApp.Test
         {
             Assert.That(() =>
             {
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\DoesNotExistFolder";
+                string path = "C:\\DoesNotExistFolder";
 
                 var result = new FileSystemVisitor(path, _predicate);
             }, Throws.InstanceOf<DirectoryNotFoundException>());

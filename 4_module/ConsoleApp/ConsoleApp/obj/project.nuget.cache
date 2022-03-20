@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "v8OHGzVgSArpRD93zfF+wA9tcQhHnz49JRz+pzNd9I0QSeTPHcDVfK6UP0YGUeAtScYtUY1xpPL/QEhydKHwgg==",
+  "dgSpecHash": "u3H214saUx3DOFTwcm7VNCRD3CHk9mae1n9CoJ7Vn0MltyyDXUdQOcLZ1QtOjxlGGveWpChn7TE8klg8llDFkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\4_module\\ConsoleApp\\ConsoleApp\\ConsoleApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Gulzada_Kakhar\\.nuget\\packages\\system.io.abstractions\\16.1.23\\system.io.abstractions.16.1.23.nupkg.sha512",
+    "C:\\Users\\Gulzada_Kakhar\\.nuget\\packages\\system.io.abstractions.testinghelpers\\16.1.23\\system.io.abstractions.testinghelpers.16.1.23.nupkg.sha512"
+  ],
   "logs": []
 }
