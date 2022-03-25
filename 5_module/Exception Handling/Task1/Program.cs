@@ -18,20 +18,7 @@ namespace Task1
               }*/
 
             JustForCheck();
-
-            UserTaskControllerTests test = new UserTaskControllerTests();
-            test.CreateUserTask_NonExistentUser_ReturnsNullAndTheTaskAlreadyExistsMessage();
         }
-
-        /*
-
-         Задание 1:
-
-        Откройте класс программы в рамках проекта Task 1 и реализуйте метод, 
-        который печатает первый символ каждой введенной строки ввода. 
-        Используйте механизм обработки исключений для проверки ввода пустой строки.
-
-         */
 
         public static void PrintFirstCharOfStr(string str)
         {
@@ -68,15 +55,17 @@ namespace Task1
                // throw;
               // throw new MySpecialException("Special message");
             }
+            catch (InvalidCastException ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw ex;
+            }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 throw new Exception(str);
             }
-            /* catch (InvalidCastException ex)
-             {
-                 Console.WriteLine(ex.Message);
-             }*/
+           
 
             try
             {
