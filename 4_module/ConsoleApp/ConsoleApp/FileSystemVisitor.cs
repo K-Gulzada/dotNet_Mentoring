@@ -51,8 +51,7 @@ namespace ConsoleApp
             }
             ProcessStatus?.Invoke("Process Finished");
         }
-
-
+                
         private List<string> VisitFiles(string root)
         {
             int counter = 0;
@@ -86,7 +85,7 @@ namespace ConsoleApp
                 {
                     dirList.Add(directory[directory.Length - 1]);
                     counter++;
-                    // SimulateSearchAbort();
+                    SimulateSearchAbort();
                 }
             }
 
@@ -196,7 +195,7 @@ namespace ConsoleApp
             {
                 Thread.Sleep(5000);
                 ProcessStatus?.Invoke("Search aborted");
-                Environment.Exit(422);
+                Environment.Exit(408);
             }
             else
             {

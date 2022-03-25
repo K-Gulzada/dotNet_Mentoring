@@ -1,0 +1,7 @@
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp\bin\Release\net6.0\publish\ConsoleApp.exe
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp\bin\Release\net6.0\publish\ConsoleApp.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp\bin\Release\net6.0\publish\ConsoleApp.deps.json
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp\bin\Release\net6.0\publish\ConsoleApp.runtimeconfig.json
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp\bin\Release\net6.0\publish\ConsoleApp.pdb
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp\bin\Release\net6.0\publish\System.IO.Abstractions.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\4_module\ConsoleApp\ConsoleApp\bin\Release\net6.0\publish\System.IO.Abstractions.TestingHelpers.dll

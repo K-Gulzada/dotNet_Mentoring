@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\4_module\\Exception Handling\\Task2\\Task2.csproj",
+      "projectUniqueName": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\5_module\\Exception Handling\\Task2\\Task2.csproj",
       "projectName": "Task2",
-      "projectPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\4_module\\Exception Handling\\Task2\\Task2.csproj",
+      "projectPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\5_module\\Exception Handling\\Task2\\Task2.csproj",
       "packagesPath": "C:\\Users\\Gulzada_Kakhar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\4_module\\Exception Handling\\Task2\\obj\\",
+      "outputPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\5_module\\Exception Handling\\Task2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gulzada_Kakhar\\AppData\\Roaming\\NuGet\\NuGet.Config",

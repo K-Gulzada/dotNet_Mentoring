@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using Task3.DoNotChange;
 using Task3.Tests.Stubs;
 
@@ -40,10 +41,10 @@ namespace Task3.Tests
             int userId = -11, existingUserId = 1;
 
             bool result = _controller.AddTaskForUser(userId, description, model);
-
-            Assert.That(result, Is.EqualTo(false));
+            Assert.That(() => _controller.AddTaskForUser(userId, description, model), Throws.InstanceOf<ArgumentOutOfRangeException>());
+            /*Assert.That(result, Is.EqualTo(false));
             StringAssert.AreEqualIgnoringCase(model.GetActionResult(), "Invalid userId");
-            Assert.That(_userDao.GetUser(existingUserId).Tasks.Count, Is.EqualTo(3));
+            Assert.That(_userDao.GetUser(existingUserId).Tasks.Count, Is.EqualTo(3));*/
         }
 
         [Test]
@@ -70,8 +71,9 @@ namespace Task3.Tests
             bool result = _controller.AddTaskForUser(userId, description, model);
 
             Assert.That(result, Is.EqualTo(false));
-            StringAssert.AreEqualIgnoringCase(model.GetActionResult(), "User not found");
-            Assert.That(_userDao.GetUser(existingUserId).Tasks.Count, Is.EqualTo(3));
+            StringAssert.AreEqualIgnoringCase(model.GetActionResult(), "The task already exists");
+           // Assert.That(_userDao.GetUser(existingUserId).Tasks.Count, Is.EqualTo(3));
+            Assert.That(() => _userDao.GetUser(existingUserId).Tasks.Count, Throws.InstanceOf<ArgumentException>());
         }
     }
 }

@@ -26,8 +26,5 @@ namespace ConsoleApp.Test
             Assert.IsNotNull(myFiles);
             Assert.AreEqual(myFiles, actualFiles);
         }
-
-
-
     }
 }
