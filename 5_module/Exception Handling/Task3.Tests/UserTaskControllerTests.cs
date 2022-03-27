@@ -64,15 +64,14 @@ namespace Task3.Tests
         public void CreateUserTask_NonExistentUser_ReturnsNullAndTheTaskAlreadyExistsMessage()
         {
             var model = new ResponseModelStub();
-            string description = "task4";
-            int userId = 2, existingUserId = 1;
+            string description = "task3";
+            int existingUserId = 1;
 
-            bool result = _controller.AddTaskForUser(userId, description, model);
+            bool result = _controller.AddTaskForUser(existingUserId, description, model);
 
             Assert.That(result, Is.EqualTo(false));
             StringAssert.AreEqualIgnoringCase(model.GetActionResult(), "The task already exists");
-           // Assert.That(_userDao.GetUser(existingUserId).Tasks.Count, Is.EqualTo(3));
-            Assert.That(() => _userDao.GetUser(existingUserId).Tasks.Count, Throws.InstanceOf<ArgumentException>());
+            Assert.That(_userDao.GetUser(existingUserId).Tasks.Count, Is.EqualTo(3));
         }
     }
 }

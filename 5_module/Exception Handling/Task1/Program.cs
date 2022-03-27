@@ -17,7 +17,10 @@ namespace Task1
                   str = Console.ReadLine();
               }*/
 
-            JustForCheck();
+            //  JustForCheck();
+
+            UserTaskControllerTests userTaskControllerTests = new UserTaskControllerTests();
+            userTaskControllerTests.CreateUserTask_NonExistentUser_ReturnsNullAndTheTaskAlreadyExistsMessage();
         }
 
         public static void PrintFirstCharOfStr(string str)
