@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<configSections>
+		<section name="CustomSection" type="UrlsSection, UsingConfigurationPropertyAttribute, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+	</configSections>
+	<CustomSection name="Contoso" url="http://www.contoso.com" port="8080" />
+</configuration>
