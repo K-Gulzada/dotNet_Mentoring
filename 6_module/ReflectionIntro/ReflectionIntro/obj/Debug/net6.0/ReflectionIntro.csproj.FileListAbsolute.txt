@@ -1,0 +1,58 @@
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.csproj.AssemblyReference.cache
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.AssemblyInfoInputs.cache
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.AssemblyInfo.cs
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.csproj.CoreCompileInputs.cache
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\ReflectionIntro.exe
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\ReflectionIntro.deps.json
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\ReflectionIntro.runtimeconfig.json
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\ReflectionIntro.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\ReflectionIntro.pdb
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\Provider.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\Provider.pdb
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.csproj.CopyComplete
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\refint\ReflectionIntro.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.pdb
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.genruntimeconfig.cache
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ref\ReflectionIntro.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\ReflectionIntro.exe
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\ReflectionIntro.deps.json
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\ReflectionIntro.runtimeconfig.json
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\ReflectionIntro.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\ReflectionIntro.pdb
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\Provider.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\Provider.pdb
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.csproj.AssemblyReference.cache
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.AssemblyInfoInputs.cache
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.AssemblyInfo.cs
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.csproj.CoreCompileInputs.cache
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.csproj.CopyComplete
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\refint\ReflectionIntro.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.pdb
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.genruntimeconfig.cache
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ref\ReflectionIntro.dll

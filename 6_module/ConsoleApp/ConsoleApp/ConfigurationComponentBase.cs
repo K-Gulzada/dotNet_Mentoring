@@ -1,34 +1,25 @@
-﻿//using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Configuration;
-//using Provider.Plugins;
+﻿using Provider.Plugins;
 
-using ConsoleApp.Provider;
 
-namespace ConsoleApp
+namespace ReflectionModule
 {
-    // ConfigurationManagerConfigurationProvider
     public class ConfigurationComponentBase
     {
         [ConfigurationItem(SettingName = "Setting_1", ProviderType = "File_Configuration_Provider")]
-        public FileConfigurationProvider fileConfigurationProvider { get; set; }
+        public FileConfigurationProvider? fileConfigurationProvider { get; set; }
 
         [ConfigurationItem(SettingName = "Setting_2", ProviderType = "Configuration_Manager_Configuration_Provider")]
-        public ConfigurationManagerConfigurationProvider configurationManagerConfigurationProvider { get; set; }
-
-        public ConfigurationComponentBase(FileConfigurationProvider fileConfigurationProvider,
-                                          ConfigurationManagerConfigurationProvider configurationManagerConfigurationProvider)
+        public ConfigurationManagerConfigurationProvider? configurationManagerConfigurationProvider { get; set; }
+        public ConfigurationComponentBase(FileConfigurationProvider fileConfigurationProvider)
         {
             this.fileConfigurationProvider = fileConfigurationProvider;
+        }
+        public ConfigurationComponentBase(ConfigurationManagerConfigurationProvider configurationManagerConfigurationProvider)
+        {
             this.configurationManagerConfigurationProvider = configurationManagerConfigurationProvider;
         }
 
-        public void SaveSettings(object? value)
+        public void Save<T>(T value)
         {
             var properties = this.GetType().GetProperties();
 
@@ -43,12 +34,22 @@ namespace ConsoleApp
                         switch (configurationAttribute.ProviderType)
                         {
                             case "File_Configuration_Provider":
-                                fileConfigurationProvider.SaveSettings(property, value);
-                                break;
+                                {
+                                    if (fileConfigurationProvider != null)
+                                    {
+                                        fileConfigurationProvider.SaveSettings(property, value);
+                                    }
+                                    break;
+                                }
 
                             case "Configuration_Manager_Configuration_Provider":
-                                configurationManagerConfigurationProvider.SaveSettings(property, value);
-                                break;
+                                {
+                                    if (configurationManagerConfigurationProvider != null)
+                                    {
+                                        configurationManagerConfigurationProvider.SaveSettings(property, value);
+                                    }
+                                    break;
+                                }
 
                         }
                     }
@@ -58,7 +59,7 @@ namespace ConsoleApp
 
         }
 
-        public void LoadSettings()
+        public void Load()
         {
             var properties = this.GetType().GetProperties();
 
@@ -73,13 +74,22 @@ namespace ConsoleApp
                         switch (configurationAttribute.ProviderType)
                         {
                             case "File_Configuration_Provider":
-                                fileConfigurationProvider.LoadSettings(property);
-                                break;
+                                {
+                                    if (fileConfigurationProvider != null)
+                                    {
+                                        fileConfigurationProvider.LoadSettings(property);
+                                    }
+                                    break;
+                                }
 
                             case "Configuration_Manager_Configuration_Provider":
-                                configurationManagerConfigurationProvider.LoadSettings(property);
-                                break;
-
+                                {
+                                    if (configurationManagerConfigurationProvider != null)
+                                    {
+                                        configurationManagerConfigurationProvider.LoadSettings(property);
+                                    }
+                                    break;
+                                }
                         }
                     }
                 }
@@ -87,25 +97,5 @@ namespace ConsoleApp
 
         }
 
-        public void Test()
-        {
-            var type = this.GetType();
-
-            // Get the PropertyInfo object:
-            var properties = this.GetType().GetProperties();
-            Console.WriteLine("Finding properties for {0} ...", type.Name);
-            foreach (var property in properties)
-            {
-                Console.WriteLine("Property:  " + property.Name);
-
-                var attributes = property.GetCustomAttributes(false);
-                foreach (var attribute in attributes)
-                {
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine(attribute.ToString());
-                    Console.ResetColor();
-                }
-            }
-        }
     }
 }

@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Google.Protobuf/3.20.0": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Google.Protobuf.dll": {}
-        },
-        "runtime": {
-          "lib/net5.0/Google.Protobuf.dll": {}
-        }
-      },
       "Microsoft.Win32.SystemEvents/6.0.0": {
         "type": "package",
         "compile": {
@@ -156,29 +147,6 @@
     }
   },
   "libraries": {
-    "Google.Protobuf/3.20.0": {
-      "sha512": "dZkpScgy6Lg6mjj+zqQkAZR49Jyoag5zloUw/gnQZvClbAW5lKPkXOoIRoM+3vwS9UNNBDwqiAJ+2KW2ZXOkCQ==",
-      "type": "package",
-      "path": "google.protobuf/3.20.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "google.protobuf.3.20.0.nupkg.sha512",
-        "google.protobuf.nuspec",
-        "lib/net45/Google.Protobuf.dll",
-        "lib/net45/Google.Protobuf.pdb",
-        "lib/net45/Google.Protobuf.xml",
-        "lib/net5.0/Google.Protobuf.dll",
-        "lib/net5.0/Google.Protobuf.pdb",
-        "lib/net5.0/Google.Protobuf.xml",
-        "lib/netstandard1.1/Google.Protobuf.dll",
-        "lib/netstandard1.1/Google.Protobuf.pdb",
-        "lib/netstandard1.1/Google.Protobuf.xml",
-        "lib/netstandard2.0/Google.Protobuf.dll",
-        "lib/netstandard2.0/Google.Protobuf.pdb",
-        "lib/netstandard2.0/Google.Protobuf.xml"
-      ]
-    },
     "Microsoft.Win32.SystemEvents/6.0.0": {
       "sha512": "hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "type": "package",
@@ -396,7 +364,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Google.Protobuf >= 3.20.0",
       "Provider >= 1.0.0",
       "System.Configuration.ConfigurationManager >= 6.0.0"
     ]
@@ -407,9 +374,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\6_module\\ConsoleApp\\ConsoleApp\\ConsoleApp.csproj",
-      "projectName": "ConsoleApp",
-      "projectPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\6_module\\ConsoleApp\\ConsoleApp\\ConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\6_module\\ConsoleApp\\ConsoleApp\\ReflectionModule.csproj",
+      "projectName": "ReflectionModule",
+      "projectPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\6_module\\ConsoleApp\\ConsoleApp\\ReflectionModule.csproj",
       "packagesPath": "C:\\Users\\Gulzada_Kakhar\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Gulzada_Kakhar\\Desktop\\.Net Mentoring Program\\6_module\\ConsoleApp\\ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
@@ -444,10 +411,6 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "Google.Protobuf": {
-            "target": "Package",
-            "version": "[3.20.0, )"
-          },
           "System.Configuration.ConfigurationManager": {
             "target": "Package",
             "version": "[6.0.0, )"
