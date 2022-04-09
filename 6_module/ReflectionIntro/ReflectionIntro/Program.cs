@@ -12,19 +12,26 @@ namespace ReflectionIntro
 
             Type? fileProvidertype = assembly.GetType("Provider.Plugins.FileConfigurationProvider");
             dynamic? file = Activator.CreateInstance(fileProvidertype, BindingFlags.Instance | BindingFlags.Public,
-                                                                    null, new object[] { "string value for fileConfigProvider" }, null);
+                                                                    null, new object[] { "new new value" }, null);
 
             Type? configurationManagerConfigurationProvidertype = assembly.GetType("Provider.Plugins.ConfigurationManagerConfigurationProvider");
             dynamic? configurationManager = Activator.CreateInstance(configurationManagerConfigurationProvidertype,
                                                                     BindingFlags.Instance | BindingFlags.Public,
-                                                                     null, new object[] { new TimeSpan(20, 20, 20) }, null);
+                                                                     null, new object[] { new TimeSpan(11, 09, 11) }, null);
 
-            var configurationBase = new ConfigurationComponentBase(file, configurationManager);           
+
+              var configurationBase = new ConfigurationComponentBase(file, configurationManager);
+
+            JsonConfigurationProvider jsonConfigurationProvider = new JsonConfigurationProvider("Json Provider value");
+            var configurationBase_2 = new ConfigurationComponentBase(jsonConfigurationProvider);           
 
             try
             {
                 configurationBase.SaveAppSettings();
                 configurationBase.ReadAppSettings();
+
+                configurationBase_2.SaveAppSettings();
+                configurationBase_2.ReadAppSettings();
             }
             catch (ConfigurationErrorsException)
             {
@@ -34,6 +41,7 @@ namespace ReflectionIntro
             {
                 Console.WriteLine("Failed to save configuration.\n {0}", e.Message);
             }
+
         }
     }
 }

@@ -12,10 +12,13 @@ namespace ReflectionIntro
         [ConfigurationItem(SettingName = "Setting_2", ProviderType = "Configuration_Manager_Configuration_Provider")]
         public ConfigurationManagerConfigurationProvider configurationManagerConfigurationProvider { get; set; }
 
+        [ConfigurationItem(SettingName = "Setting_3", ProviderType = "Json_Configuration_Provider")]
+        public JsonConfigurationProvider jsonConfigurationProvider { get; set; }
+
         public ConfigurationComponentBase(FileConfigurationProvider fileConfigurationProvider,
                                           ConfigurationManagerConfigurationProvider configurationManagerConfigurationProvider)
         {
-            if(fileConfigurationProvider==null || configurationManagerConfigurationProvider == null)
+            if (fileConfigurationProvider == null || configurationManagerConfigurationProvider == null)
             {
                 throw new ArgumentNullException("property cannot be null");
             }
@@ -23,7 +26,12 @@ namespace ReflectionIntro
             {
                 this.fileConfigurationProvider = fileConfigurationProvider;
                 this.configurationManagerConfigurationProvider = configurationManagerConfigurationProvider;
-            }            
+            }
+        }
+
+        public ConfigurationComponentBase(JsonConfigurationProvider jsonConfigurationProvider)
+        {
+            this.jsonConfigurationProvider = jsonConfigurationProvider;
         }
 
         public void SaveAppSettings()
@@ -42,17 +50,34 @@ namespace ReflectionIntro
                         {
                             case "File_Configuration_Provider":
                                 {
-                                    if (fileConfigurationProvider.Value != null)
+                                    if (fileConfigurationProvider != null)
                                     {
-                                        fileConfigurationProvider.SaveSettings(property, fileConfigurationProvider.Value);
+                                        if (fileConfigurationProvider.Value != null)
+                                        {
+                                            fileConfigurationProvider.SaveSettings(property, fileConfigurationProvider.Value);
+                                        }
                                     }
                                     break;
                                 }
                             case "Configuration_Manager_Configuration_Provider":
                                 {
-                                    if (configurationManagerConfigurationProvider.Value != null)
+                                    if (configurationManagerConfigurationProvider != null)
                                     {
-                                        configurationManagerConfigurationProvider.SaveSettings(property, configurationManagerConfigurationProvider.Value);
+                                        if (configurationManagerConfigurationProvider.Value != null)
+                                        {
+                                            configurationManagerConfigurationProvider.SaveSettings(property, configurationManagerConfigurationProvider.Value);
+                                        }
+                                    }
+                                    break;
+                                }
+                            case "Json_Configuration_Provider":
+                                {
+                                    if (jsonConfigurationProvider != null)
+                                    {
+                                        if (jsonConfigurationProvider.Value != null)
+                                        {
+                                            jsonConfigurationProvider.SaveSettings(property, jsonConfigurationProvider.Value);
+                                        }
                                     }
                                     break;
                                 }
@@ -77,12 +102,28 @@ namespace ReflectionIntro
                         switch (configurationAttribute.ProviderType)
                         {
                             case "File_Configuration_Provider":
-                                fileConfigurationProvider.LoadSettings(property);
+                                if (fileConfigurationProvider != null)
+                                {
+                                    fileConfigurationProvider.LoadSettings(property);
+                                }
                                 break;
-
                             case "Configuration_Manager_Configuration_Provider":
-                                configurationManagerConfigurationProvider.LoadSettings(property);
-                                break;
+                                {
+                                    if (configurationManagerConfigurationProvider != null)
+                                    {
+                                        configurationManagerConfigurationProvider.LoadSettings(property);
+                                    }
+                                    break;
+                                }
+                            case "Json_Configuration_Provider":
+                                {
+                                    if (jsonConfigurationProvider != null)
+                                    {
+                                        jsonConfigurationProvider.LoadSettings(property);
+                                    }
+                                    break;
+                                }
+
                         }
                     }
                 }

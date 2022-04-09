@@ -56,3 +56,7 @@ C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\
 C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.pdb
 C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ReflectionIntro.genruntimeconfig.cache
 C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\obj\Debug\net6.0\ref\ReflectionIntro.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\6_module\ReflectionIntro\ReflectionIntro\bin\Debug\net6.0\Newtonsoft.Json.dll

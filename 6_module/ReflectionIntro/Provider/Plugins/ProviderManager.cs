@@ -12,7 +12,7 @@ namespace Provider.Plugins
             Value = value;
         }
 
-        public virtual void SaveSettings<T>(PropertyInfo propertyInfo, object value)
+        public virtual void SaveSettings(PropertyInfo propertyInfo, object value)
         {
             Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             config.AppSettings.Settings.Add(propertyInfo.Name, value.ToString());
@@ -40,7 +40,6 @@ namespace Provider.Plugins
             else
             {
                 Console.WriteLine("Key: {0} Value: {1}", propertyInfo.Name, appSettings[propertyInfo.Name]);
-
             }
         }
     }
