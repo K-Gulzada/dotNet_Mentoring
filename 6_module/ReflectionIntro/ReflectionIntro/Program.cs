@@ -18,12 +18,10 @@ namespace ReflectionIntro
             dynamic? configurationManager = Activator.CreateInstance(configurationManagerConfigurationProvidertype,
                                                                     BindingFlags.Instance | BindingFlags.Public,
                                                                      null, new object[] { new TimeSpan(11, 09, 11) }, null);
-
-
-              var configurationBase = new ConfigurationComponentBase(file, configurationManager);
+            var configurationBase = new ConfigurationComponentBase(file, configurationManager);
 
             JsonConfigurationProvider jsonConfigurationProvider = new JsonConfigurationProvider("Json Provider value");
-            var configurationBase_2 = new ConfigurationComponentBase(jsonConfigurationProvider);           
+            var configurationBase_2 = new ConfigurationComponentBase(jsonConfigurationProvider);
 
             try
             {
@@ -41,7 +39,6 @@ namespace ReflectionIntro
             {
                 Console.WriteLine("Failed to save configuration.\n {0}", e.Message);
             }
-
         }
     }
 }

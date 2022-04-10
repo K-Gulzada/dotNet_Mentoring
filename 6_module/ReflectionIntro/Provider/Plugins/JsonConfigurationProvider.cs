@@ -13,6 +13,7 @@ namespace Provider.Plugins
         public override void SaveSettings(PropertyInfo propertyInfo, object value)
         {
             JObject jsonObj = JObject.Parse(File.ReadAllText(GetFilePath()));
+
             if (jsonObj[propertyInfo.Name] == null)
             {
                 jsonObj.Add(propertyInfo.Name, value.ToString());
@@ -20,10 +21,10 @@ namespace Provider.Plugins
             else
             {
                 jsonObj[propertyInfo.Name] = value.ToString();
-
             }
 
             string output = JsonConvert.SerializeObject(jsonObj, Formatting.Indented);
+
             File.WriteAllText(GetFilePath(), output);
         }
 

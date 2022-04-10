@@ -31,7 +31,14 @@ namespace ReflectionIntro
 
         public ConfigurationComponentBase(JsonConfigurationProvider jsonConfigurationProvider)
         {
-            this.jsonConfigurationProvider = jsonConfigurationProvider;
+            if (jsonConfigurationProvider == null)
+            {
+                throw new ArgumentNullException("property cannot be null");
+            }
+            else
+            {
+                this.jsonConfigurationProvider = jsonConfigurationProvider;
+            }
         }
 
         public void SaveAppSettings()
