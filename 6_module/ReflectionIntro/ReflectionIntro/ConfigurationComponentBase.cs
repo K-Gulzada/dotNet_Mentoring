@@ -3,7 +3,6 @@
 
 namespace ReflectionIntro
 {
-    // ConfigurationManagerConfigurationProvider
     public class ConfigurationComponentBase
     {
         [ConfigurationItem(SettingName = "Setting_1", ProviderType = "File_Configuration_Provider")]
