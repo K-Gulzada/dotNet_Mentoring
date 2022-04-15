@@ -1,0 +1,10 @@
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\7_module\DataStructures\Tasks\bin\Debug\netcoreapp3.1\Tasks.deps.json
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\7_module\DataStructures\Tasks\bin\Debug\netcoreapp3.1\Tasks.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\7_module\DataStructures\Tasks\bin\Debug\netcoreapp3.1\Tasks.pdb
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\7_module\DataStructures\Tasks\obj\Debug\netcoreapp3.1\Tasks.csproj.AssemblyReference.cache
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\7_module\DataStructures\Tasks\obj\Debug\netcoreapp3.1\Tasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\7_module\DataStructures\Tasks\obj\Debug\netcoreapp3.1\Tasks.AssemblyInfoInputs.cache
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\7_module\DataStructures\Tasks\obj\Debug\netcoreapp3.1\Tasks.AssemblyInfo.cs
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\7_module\DataStructures\Tasks\obj\Debug\netcoreapp3.1\Tasks.csproj.CoreCompileInputs.cache
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\7_module\DataStructures\Tasks\obj\Debug\netcoreapp3.1\Tasks.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\7_module\DataStructures\Tasks\obj\Debug\netcoreapp3.1\Tasks.pdb
