@@ -23,7 +23,7 @@ namespace KataTest
         }
 
         [Test]
-        public void Impossible_To_Find_Exit_Returns_False_And_Empty_Path()
+        public void Impossible_To_Find_Exit_Returns_False_And_NoWayFound_String()
         {
             char[,] labyrinthMap = new char[6, 6] { { '*', '*', '*', '*' , '*', '*' },
                                             { '_', '*', '_', '_' , '_', '*' },
