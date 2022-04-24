@@ -1,0 +1,24 @@
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\bin\Debug\net6.0\Kata.deps.json
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\bin\Debug\net6.0\Kata.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\bin\Debug\net6.0\Kata.pdb
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\obj\Debug\net6.0\Kata.csproj.AssemblyReference.cache
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\obj\Debug\net6.0\Kata.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\obj\Debug\net6.0\Kata.AssemblyInfoInputs.cache
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\obj\Debug\net6.0\Kata.AssemblyInfo.cs
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\obj\Debug\net6.0\Kata.csproj.CoreCompileInputs.cache
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\obj\Debug\net6.0\Kata.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\obj\Debug\net6.0\refint\Kata.dll
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\obj\Debug\net6.0\Kata.pdb
+C:\Users\Gulzada_Kakhar\Desktop\Projectsxm\6_module\Kata\Kata\obj\Debug\net6.0\ref\Kata.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\bin\Debug\net6.0\Kata.deps.json
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\bin\Debug\net6.0\Kata.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\bin\Debug\net6.0\Kata.pdb
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\obj\Debug\net6.0\Kata.csproj.AssemblyReference.cache
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\obj\Debug\net6.0\Kata.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\obj\Debug\net6.0\Kata.AssemblyInfoInputs.cache
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\obj\Debug\net6.0\Kata.AssemblyInfo.cs
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\obj\Debug\net6.0\Kata.csproj.CoreCompileInputs.cache
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\obj\Debug\net6.0\Kata.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\obj\Debug\net6.0\refint\Kata.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\obj\Debug\net6.0\Kata.pdb
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\8_module\Unit Testing\Kata\Kata\obj\Debug\net6.0\ref\Kata.dll

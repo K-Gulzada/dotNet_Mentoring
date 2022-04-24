@@ -202,6 +202,17 @@ namespace Tasks
             return list.GetEnumerator();
         }
 
+        /* public IEnumerator<T> GetEnumerator()
+         {
+             Node<T> current = head;
+
+             while (current != null)
+             {
+                 yield return current.Data;
+                 current = current.Next;
+             }
+         }*/
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
