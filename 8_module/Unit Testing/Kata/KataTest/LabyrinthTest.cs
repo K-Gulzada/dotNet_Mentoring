@@ -18,7 +18,7 @@ namespace KataTest
 
             var labyrinth = new Labyrinth();
             var actual = labyrinth.FindExitFromLabyrinth(labyrinthMap, out string path);
-            Assert.AreEqual(true, actual);
+            Assert.True(actual);
             Assert.AreEqual("S R U R R D D D L", path);
         }
 
@@ -34,7 +34,7 @@ namespace KataTest
 
             var labyrinth = new Labyrinth();
             var actual = labyrinth.FindExitFromLabyrinth(labyrinthMap, out string path);
-            Assert.AreEqual(false, actual);
+            Assert.False(actual);
             Assert.AreEqual("No Way Found", path);
         }
     }

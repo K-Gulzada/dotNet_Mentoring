@@ -11,8 +11,8 @@ namespace KataTest
         [TestCaseSource(nameof(GetDictionaryCountTwo))]
         public void ReplaceWordsCorrespondingValue_Returns_Replaced_Words(string input, Dictionary<string, string> dict, string expected)
         {
-            var dictionaryReplacer = new DictionaryReplacer();        
-            var actual = dictionaryReplacer.ReplaceWordsCorrespondingValue(input, dict);          
+            var dictionaryReplacer = new DictionaryReplacer();
+            var actual = dictionaryReplacer.ReplaceWordsCorrespondingValue(input, dict);
             Assert.AreEqual(expected, actual);
         }
 
@@ -20,20 +20,20 @@ namespace KataTest
         public void ReplaceWordsCorrespondingValue_Throws_ArgumentNullException()
         {
             var dictionaryReplacer = new DictionaryReplacer();
-            var dict=new Dictionary<string, string>();
+            var dict = new Dictionary<string, string>();
             Assert.That(() => dictionaryReplacer.ReplaceWordsCorrespondingValue(null, dict), Throws.ArgumentNullException);
-            Assert.That(() => dictionaryReplacer.ReplaceWordsCorrespondingValue( "", null), Throws.ArgumentNullException);
+            Assert.That(() => dictionaryReplacer.ReplaceWordsCorrespondingValue("", null), Throws.ArgumentNullException);
         }
 
         private static IEnumerable<object[]> GetDictionaryEmpty()
         {
-            var dict= new Dictionary<string, string>();
+            var dict = new Dictionary<string, string>();
             return new[] { new object[] { "", dict, "" }, };
         }
 
         private static IEnumerable<object[]> GetDictionaryCountOne()
         {
-            var dict= new Dictionary<string, string> { ["temp"] = "temporary" };
+            var dict = new Dictionary<string, string> { ["temp"] = "temporary" };
             return new[] { new object[] { "$temp$", dict, "temporary" }, };
         }
 
