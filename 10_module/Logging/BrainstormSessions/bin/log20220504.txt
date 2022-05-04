@@ -1,0 +1,1 @@
+2022-05-04 11:27:35.824 +06:00 [DBG] Called Index method with parameter id: 1 from SessionController
