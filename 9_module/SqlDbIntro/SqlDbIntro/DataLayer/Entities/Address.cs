@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SqlDbIntro.Entities
+namespace SqlDbIntro.DataLayer.Entities
 {
-    public class Address
+    public class Address : BaseModel
     {
-        [Key]
-        public int Id { get; set; }
+
         [MaxLength(50)]
         public string Street { get; set; }
         [MaxLength(20)]

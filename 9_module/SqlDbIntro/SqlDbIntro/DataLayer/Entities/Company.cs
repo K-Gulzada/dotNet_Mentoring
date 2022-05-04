@@ -1,11 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SqlDbIntro.Entities
+namespace SqlDbIntro.DataLayer.Entities
 {
-    public class Company
+    public class Company : BaseModel
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
         [MaxLength(20)]
         public string Name { get; set; }
