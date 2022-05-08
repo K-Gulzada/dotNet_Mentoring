@@ -139,3 +139,6 @@ C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\10_module\Logging\Brainst
 C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\10_module\Logging\BrainstormSessions.Test\bin\Debug\netcoreapp3.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\10_module\Logging\BrainstormSessions.Test\bin\Debug\netcoreapp3.0\Serilog.Sinks.InMemory.dll
 C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\10_module\Logging\BrainstormSessions.Test\bin\Debug\netcoreapp3.0\appSettings.json
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\10_module\Logging\BrainstormSessions.Test\bin\Debug\netcoreapp3.0\FluentAssertions.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\10_module\Logging\BrainstormSessions.Test\bin\Debug\netcoreapp3.0\Serilog.Sinks.TestCorrelator.dll
+C:\Users\Gulzada_Kakhar\Desktop\.Net Mentoring Program\10_module\Logging\BrainstormSessions.Test\bin\Debug\netcoreapp3.0\System.Reactive.dll

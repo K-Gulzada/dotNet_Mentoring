@@ -7,14 +7,13 @@ using BrainstormSessions.Core.Model;
 using BrainstormSessions.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace BrainstormSessions.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IBrainstormSessionRepository _sessionRepository;
-       // private readonly ILogger _logger;
-
         public HomeController(IBrainstormSessionRepository sessionRepository)
         {
             _sessionRepository = sessionRepository;
@@ -22,6 +21,7 @@ namespace BrainstormSessions.Controllers
 
         public async Task<IActionResult> Index()
         {
+            Log.Information("Index action is making response");
             var sessionList = await _sessionRepository.ListAsync();
 
             var model = sessionList.Select(session => new StormSessionViewModel()
@@ -46,6 +46,8 @@ namespace BrainstormSessions.Controllers
         {
             if (!ModelState.IsValid)
             {
+                Log.Warning($"Model state is invalid in {nameof(Index)}");
+
                 return BadRequest(ModelState);
             }
             else

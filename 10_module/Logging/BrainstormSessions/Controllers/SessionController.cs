@@ -4,6 +4,7 @@ using BrainstormSessions.Core.Interfaces;
 using BrainstormSessions.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace BrainstormSessions.Controllers
 {
@@ -11,16 +12,15 @@ namespace BrainstormSessions.Controllers
     {
         private readonly IBrainstormSessionRepository _sessionRepository;
 
-        private readonly ILogger<SessionController> _logger;
-
-        public SessionController(IBrainstormSessionRepository sessionRepository, ILogger<SessionController> logger)
+        public SessionController(IBrainstormSessionRepository sessionRepository)
         {
             _sessionRepository = sessionRepository;
-            _logger = logger;
         }
 
         public async Task<IActionResult> Index(int? id)
         {
+            Log.Debug($"Called Index method with parameter id: {id} from SessionController");
+
             if (!id.HasValue)
             {
                 return RedirectToAction(actionName: nameof(Index),
@@ -28,6 +28,8 @@ namespace BrainstormSessions.Controllers
             }
 
             var session = await _sessionRepository.GetByIdAsync(id.Value);
+            Log.Debug($"Value of session is {session}");
+
             if (session == null)
             {
                 return Content("Session not found.");
@@ -40,7 +42,6 @@ namespace BrainstormSessions.Controllers
                 Id = session.Id
             };
 
-            _logger.LogDebug($"Called Index method with parameter id: {id} from SessionController");
             return View(viewModel);
         }
     }
