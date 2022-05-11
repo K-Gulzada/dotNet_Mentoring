@@ -144,7 +144,7 @@ namespace BrainstormSessions.Test.UnitTests
             {
                 using (var logger = new LoggerConfiguration()
                     .WriteTo.Sink(new TestCorrelatorSink())
-                        .Enrich.FromLogContext()
+                        .Enrich.FromLogContext().MinimumLevel.Debug()
                             .CreateLogger())
                 {
                     Log.Logger = logger;
