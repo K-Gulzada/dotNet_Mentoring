@@ -1,3 +1,0 @@
-2022-05-09 18:31:48.687 +06:00 [INF] Index action is making response
-2022-05-09 18:35:17.122 +06:00 [INF] Index action is making response
-2022-05-09 18:40:21.055 +06:00 [INF] Index action is making response
