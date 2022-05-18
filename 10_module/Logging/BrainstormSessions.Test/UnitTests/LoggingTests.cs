@@ -6,8 +6,6 @@ using BrainstormSessions.Api;
 using BrainstormSessions.Controllers;
 using BrainstormSessions.Core.Interfaces;
 using BrainstormSessions.Core.Model;
-using log4net.Appender;
-using log4net.Config;
 using Moq;
 using Serilog;
 using Serilog.Sinks.TestCorrelator;
@@ -18,21 +16,8 @@ using Serilog.Events;
 
 namespace BrainstormSessions.Test.UnitTests
 {
-    public class LoggingTests : IDisposable
+    public class LoggingTests
     {
-        private readonly MemoryAppender _appender;
-
-        public LoggingTests()
-        {
-            _appender = new MemoryAppender();
-            BasicConfigurator.Configure(_appender);
-        }
-
-        public void Dispose()
-        {
-            _appender.Clear();
-        }
-
         [Fact]
         public async Task HomeController_Index_LogInfoMessages()
         {
@@ -167,21 +152,23 @@ namespace BrainstormSessions.Test.UnitTests
 
         private List<BrainstormSession> GetTestSessions()
         {
-            var sessions = new List<BrainstormSession>();
-            sessions.Add(new BrainstormSession()
-            {
-                DateCreated = new DateTime(2016, 7, 2),
-                Id = 1,
-                Name = "Test One"
-            });
-            sessions.Add(new BrainstormSession()
-            {
-                DateCreated = new DateTime(2016, 7, 1),
-                Id = 2,
-                Name = "Test Two"
-            });
+            var sessions = new List<BrainstormSession> {
+
+                new BrainstormSession()
+                {
+                    DateCreated = new DateTime(2016, 7, 2),
+                    Id = 1,
+                    Name = "Test One"
+                },
+                new BrainstormSession()
+                {
+                    DateCreated = new DateTime(2016, 7, 1),
+                    Id = 2,
+                    Name = "Test Two"
+                }
+            };
+
             return sessions;
         }
-
     }
 }
