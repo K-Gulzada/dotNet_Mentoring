@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace File_Cabinet.Entities
 {
-    public class Book
+    public class Book : Document
     {
+
         public string ISBN { get; set; }
-        public string Title { get; set; }
         public List<string> Authors { get; set; }
         public int NumberOfPages { get; set; }
-        public string Publisher { get; set; }
-        public DateTime PublishedDate { get; set; }       
+        public string Publisher { get; set; }  
+
     }
 }

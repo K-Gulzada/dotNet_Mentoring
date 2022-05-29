@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace File_Cabinet.Entities
 {
-   public class Magazine
+    public class Magazine : Document
     {
-        public string Title { get; set; }
         public string Publisher { get; set; }
         public int ReleaseNumber { get; set; }
-        public DateTime PublishedDate { get; set; }
+
     }
 }

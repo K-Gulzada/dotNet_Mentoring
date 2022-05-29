@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace File_Cabinet.Entities
 {
-    public class Patent
+    public class Patent : Document
     {
-        public Guid Id { get; set; }
-        public string Title { get; set; }
-        public DateTime PublishedDate { get; set; }
         public DateTime ExpirationDate { get; set; }
-        public List<Author> Authors { get; set; }      
+        public List<string> Authors { get; set; }     
+
     }
 }
