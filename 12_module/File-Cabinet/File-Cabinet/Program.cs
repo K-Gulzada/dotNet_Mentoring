@@ -27,8 +27,7 @@ namespace FileCabinet
 
             repository.StoreDocument(filteredDocs);
 
-            var cacheDocument = new CacheDocument<Book>();
-          
+            var cacheDocument = new CacheDocument<Book>();          
             var myCachedDoc = cacheDocument.GetOrCreate("DN_111 Book", () => books[0]);
 
             Console.ReadKey();
@@ -36,16 +35,6 @@ namespace FileCabinet
         }
     }
 }
-
-
-// ключевое слово new
-// композиция / агрегация  (пример relation in sql)
-// rename files/folders +
-// without reflection +
-// use NewtonSoft
-// numbers to Const +
-// IEnumerable
-// method transform LINQ
 
 
 
