@@ -10,7 +10,7 @@ namespace FileCabinet
         {
             DocumentRepository repository = new();
             var allDocs = repository.GetAll();
-            repository.StoreDocument(allDocs, $"allDocs.json");
+            repository.StoreDocument(allDocs);
 
             var filteredDocs = repository.SearchByDocumentNumber("DN_111 Book");
             var books = new List<Book>();
@@ -25,7 +25,7 @@ namespace FileCabinet
                 book.ToString();
             }
 
-            repository.StoreDocument(filteredDocs, $"{books[0].GetType().Name}_#{allDocs[0].DocumentNumber}.json");
+            repository.StoreDocument(filteredDocs);
 
             var cacheDocument = new CacheDocument<Book>();
           
