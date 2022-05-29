@@ -8,17 +8,24 @@ namespace FileCabinet
     {
         public static void Main(string[] args)
         {
-            DocumentRepository<Book> repo = new DocumentRepository<Book>();
-            var allDocs = repo.GetAll();
-            repo.StoreDocument(allDocs, $"allDocs.json");
+            DocumentRepository repository = new();
+            var allDocs = repository.GetAll();
+            repository.StoreDocument(allDocs, $"allDocs.json");
 
-            var books = repo.SearchByDocumentNumber("DN_111 Book");
-            repo.StoreDocument(books, $"{books[0].GetType().Name}_#{allDocs[0].DocumentNumber}.json");
+            var filteredDocs = repository.SearchByDocumentNumber("DN_111 Book");
+            var books = new List<Book>();
 
-            foreach (var book in books)
+            foreach(var doc in filteredDocs)
             {
-                Console.WriteLine(book.DocumentNumber + " " + book.Title + " \n" + book.ISBN + " " + book.NumberOfPages + " \n" + book.PublishedDate);
+                books.Add((Book)doc);
             }
+
+            foreach(var book in books)
+            {
+                book.ToString();
+            }
+
+            repository.StoreDocument(filteredDocs, $"{books[0].GetType().Name}_#{allDocs[0].DocumentNumber}.json");
 
             var cacheDocument = new CacheDocument<Book>();
           
@@ -33,12 +40,12 @@ namespace FileCabinet
 
 // ключевое слово new
 // композиция / агрегация  (пример relation in sql)
-// rename files/folders
-// without reflection
+// rename files/folders +
+// without reflection +
 // use NewtonSoft
-// numbers to Const 
+// numbers to Const +
 // IEnumerable
-// nethod transform LINQ
+// method transform LINQ
 
 
 

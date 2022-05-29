@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace File_Cabinet.Entities
+﻿namespace File_Cabinet.Entities
 {
     public class Magazine : Document
     {
         public string Publisher { get; set; }
         public int ReleaseNumber { get; set; }
-
     }
 }

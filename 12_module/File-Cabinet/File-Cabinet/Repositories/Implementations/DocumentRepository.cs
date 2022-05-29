@@ -8,45 +8,27 @@ namespace File_Cabinet.Repositories.impl
     {
         public List<Document> GetAll()
         {
-            var allDocuments = SeedExtension.CreateDefaultDocument();
-          /*
-            List<T> docs = new List<T>();
-
-            foreach (var fd in allDocuments)
-            {
-                Type objectType = fd.GetType();
-                T instance = (T)Activator.CreateInstance(objectType);
-
-                docs.Add(fd as T);
-            }
-*/
-            return allDocuments;
+            return SeedExtension.CreateDefaultDocument();
         }
-        public void StoreDocument(List<Document> data, string path)
+        public void StoreDocument(List<Document> documents, string path)
         {
-            MyJsonSerializer<T> serializer = new MyJsonSerializer<T>(path);
+            MyJsonSerializer<object> serializer = new MyJsonSerializer<object>(path);
 
-            foreach (var doc in data)
+            foreach (var document in documents)
             {
-                serializer.Serialize(doc);
+                Type objectType = document.GetType();
+                var instance = Activator.CreateInstance(objectType);
+                instance = document;
+                serializer.Serialize(instance);
             }
+
         }
-        public List<T> SearchByDocumentNumber(string documentNumber)
+        public List<Document> SearchByDocumentNumber(string documentNumber)
         {
             var allDocuments = SeedExtension.CreateDefaultDocument();
             var filteredDocuments = allDocuments.Where(x => x.DocumentNumber == documentNumber).ToList();
 
-            List<T> identifiedDocs = new List<T>();
-
-            foreach (var fd in filteredDocuments)
-            {
-                Type objectType = fd.GetType();
-                T instance = (T)Activator.CreateInstance(objectType);
-
-                identifiedDocs.Add(fd as T);
-            }
-
-            return identifiedDocs;
+            return filteredDocuments;
         }
     }
 }

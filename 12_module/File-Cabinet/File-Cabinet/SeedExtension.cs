@@ -1,9 +1,4 @@
 ﻿using File_Cabinet.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace File_Cabinet
 {
@@ -74,28 +69,21 @@ namespace File_Cabinet
 
         public static List<Document> CreateDefaultDocument()
         {
-           /* var document_1 = new Document
-            {
-                DocumentNumber = Guid.NewGuid().ToString(),
-                Title = "Document Title",
-                PublishedDate = DateTime.Now
-            };*/
-
             var books = CreateDefaultBooks();
             var localizedBooks = CreateDefaultLocalizedBooks();
-
             var documents = new List<Document>();
+
             foreach(var book in books)
             {
                 documents.Add(book);
             }
-            foreach (var lb in localizedBooks)
+
+            foreach (var localizedBook in localizedBooks)
             {
-                documents.Add(lb);
+                documents.Add(localizedBook);
             }
 
             return documents;
-
         }
     }
 }
