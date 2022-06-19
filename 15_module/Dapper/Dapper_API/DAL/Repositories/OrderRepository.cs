@@ -13,7 +13,7 @@ namespace Dapper_API.DAL.Repositories
             _context = context;
         }
 
-        public async Task Create(OrderDTO order)
+        public async Task Create(Order order)
         {
             string sqlQuery = "INSERT into Orders (Status,[CreatedDate], [UpdatedDate], ProductId)" +
                                           " values (@Status, @CreatedDate, @UpdatedDate, @ProductId)";
@@ -35,25 +35,25 @@ namespace Dapper_API.DAL.Repositories
             await connection.ExecuteAsync(query, new { Id = id });         
         }
 
-        public async Task<Order> GetById(int id)
+        public async Task<OrderEntity> GetById(int id)
         {
             string sqlQuery = $"SELECT * FROM orders WHERE Id = @Id";
 
             using var connection = _context.CreateConnection();
-            var order = await connection.QueryAsync<Order>(sqlQuery, new { Id = id });
+            var order = await connection.QueryAsync<OrderEntity>(sqlQuery, new { Id = id });
             return order.FirstOrDefault();
         }
 
-        public async Task<IEnumerable<Order>> GetOrders()
+        public async Task<IEnumerable<OrderEntity>> GetOrders()
         {
             string sqlQuery = "SELECT * FROM Orders";
 
             using var connection = _context.CreateConnection();
-            var orders = await connection.QueryAsync<Order>(sqlQuery);
+            var orders = await connection.QueryAsync<OrderEntity>(sqlQuery);
             return orders.ToList();
         }
 
-        public async Task Update(OrderDTO order, int id)
+        public async Task Update(Order order, int id)
         {
             string sqlQuery = "UPDATE Orders SET Status = @Status, CreatedDate = @CreatedDate," +
                                               " UpdatedDate = @UpdatedDate, ProductId = @ProductId WHERE Id = @id";
@@ -68,7 +68,7 @@ namespace Dapper_API.DAL.Repositories
             await connection.ExecuteAsync(sqlQuery, parameters);
         }
 
-        public async Task<List<Order>> GetOrderByCreatedDateMonth(string month)
+        public async Task<List<OrderEntity>> GetOrderByCreatedDateMonth(string month)
         {
             using var connection = _context.CreateConnection();
             
@@ -77,12 +77,12 @@ namespace Dapper_API.DAL.Repositories
             var parameters = new DynamicParameters();
             parameters.Add("Month", month, DbType.String);
 
-            var orders = connection.Query<Order>(procedure, parameters,
+            var orders = connection.Query<OrderEntity>(procedure, parameters,
             commandType: CommandType.StoredProcedure).ToList();  
 
             return orders;
         }
-        public async Task<List<Order>> GetByStatus(Status status)
+        public async Task<List<OrderEntity>> GetByStatus(Status status)
         {
             using var connection = _context.CreateConnection();
 
@@ -91,7 +91,7 @@ namespace Dapper_API.DAL.Repositories
             var parameters = new DynamicParameters();
             parameters.Add("Status", status, DbType.Int32);
 
-            var orders = connection.Query<Order>(procedure, parameters,
+            var orders = connection.Query<OrderEntity>(procedure, parameters,
             commandType: CommandType.StoredProcedure).ToList();
 
             return orders;
@@ -108,7 +108,7 @@ namespace Dapper_API.DAL.Repositories
                 var parameters = new DynamicParameters();
                 parameters.Add("Id", id, DbType.Int32);
 
-                connection.Query<Order>(procedure, parameters,
+                connection.Query<OrderEntity>(procedure, parameters,
                 commandType: CommandType.StoredProcedure).ToList();
             }
         }

@@ -12,7 +12,7 @@ namespace Dapper_API.DAL.Repositories
             _context = context;
         }
 
-        public async Task Create(ProductDTO product)
+        public async Task Create(Product product)
         {
             string sqlQuery = "INSERT INTO Products (Name, Description, Weight, Height, Width, Length) " +
                                             "VALUES(@Name, @Description, @Weight, @Height, @Width, @Length)";
@@ -36,25 +36,25 @@ namespace Dapper_API.DAL.Repositories
             await connection.ExecuteAsync(query, new { Id = id });           
         }
 
-        public async Task<Product> GetById(int id)
+        public async Task<ProductEntity> GetById(int id)
         {
             string sqlQuery = $"SELECT * FROM Products WHERE Id = @Id";
 
             using var connection = _context.CreateConnection();
-            var order = await connection.QueryAsync<Product>(sqlQuery, new { Id = id });
+            var order = await connection.QueryAsync<ProductEntity>(sqlQuery, new { Id = id });
             return order.FirstOrDefault();
         }
 
-        public async Task<IEnumerable<Product>> GetProducts()
+        public async Task<IEnumerable<ProductEntity>> GetProducts()
         {
             string sqlQuery = "SELECT * FROM Products";
 
             using var connection = _context.CreateConnection();
-            var products = await connection.QueryAsync<Product>(sqlQuery);
+            var products = await connection.QueryAsync<ProductEntity>(sqlQuery);
             return products.ToList();
         }
 
-        public async Task Update(ProductDTO product, int id)
+        public async Task Update(Product product, int id)
         {
             string sqlQuery = "UPDATE Products SET Name = @Name, Description = @Description," +
                              " Weight = @Weight, Height = @Height, Width = @Width, Length = @Length WHERE Id = @id";

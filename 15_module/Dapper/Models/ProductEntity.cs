@@ -1,20 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Models
+﻿namespace Models
 {
-    public class ProductDTO
+    public class ProductEntity
     {
-        [Required]
+        public int Id { get; set; }
         public string Name { get; set; }
-        [Required]
         public string Description { get; set; }
-        [Required]
         public double Weight { get; set; }
-        [Required]
         public double Height { get; set; }
-        [Required]
         public double Width { get; set; }
-        [Required]
         public double Length { get; set; }
+        public IEnumerable<OrderEntity>? Orders { get; set; }
     }
 }

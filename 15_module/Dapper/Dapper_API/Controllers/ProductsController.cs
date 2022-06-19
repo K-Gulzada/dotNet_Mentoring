@@ -19,40 +19,24 @@ namespace Dapper_API.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            try
+            var Data = await _productRepository.GetProducts();
+            return Ok(new
             {
-                var Data = await _productRepository.GetProducts();
-                return Ok(new
-                {
-                    Success = true,
-                    Message = "All products returned.",
-                    Data
-                });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return StatusCode(500, ex.Message);
-            }
+                Success = true,
+                Message = "All products returned.",
+                Data
+            });
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(ProductDTO createProductDTO)
+        public async Task<IActionResult> Post(Product createProductDTO)
         {
-            try
+            await _productRepository.Create(createProductDTO);
+            return Ok(new
             {
-                await _productRepository.Create(createProductDTO);
-                return Ok(new
-                {
-                    Success = true,
-                    Message = "Product item created."
-                });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return StatusCode(500, ex.Message);
-            }
+                Success = true,
+                Message = "Product item created."
+            });
         }
     }
 }

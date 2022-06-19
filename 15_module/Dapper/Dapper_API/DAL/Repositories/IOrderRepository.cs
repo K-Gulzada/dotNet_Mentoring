@@ -5,14 +5,13 @@ namespace Dapper_API.DAL.Repositories
 {
     public interface IOrderRepository
     {
-        Task<IEnumerable<Order>> GetOrders();
-        Task<Order> GetById(int id);
-
-        Task Create(OrderDTO order);
-        Task Update(OrderDTO order, int id);
+        Task<IEnumerable<OrderEntity>> GetOrders();
+        Task<OrderEntity> GetById(int id);
+        Task Create(Order order);
+        Task Update(Order order, int id);
         Task Delete(int id);
-        Task<List<Order>> GetOrderByCreatedDateMonth(string month);
-        Task<List<Order>> GetByStatus(Status status);
+        Task<List<OrderEntity>> GetOrderByCreatedDateMonth(string month);
+        Task<List<OrderEntity>> GetByStatus(Status status);
         Task BulkDeleteOrderById(List<int> ids);
     }
 }
