@@ -1,11 +1,6 @@
 ﻿using EntityFrameworkIntro.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EntityFrameworkIntro.Context
 {
@@ -14,7 +9,6 @@ namespace EntityFrameworkIntro.Context
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public ShopDbContext() { }
-
         public ShopDbContext(DbContextOptions<ShopDbContext> options) : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

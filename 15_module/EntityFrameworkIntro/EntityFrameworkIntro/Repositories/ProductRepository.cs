@@ -11,6 +11,7 @@ namespace EntityFrameworkIntro.Repositories
         {
             _factory = factory;
         }
+
         public void AddProduct(Product product)
         {
             using (var context = _factory.Create())
@@ -26,7 +27,6 @@ namespace EntityFrameworkIntro.Repositories
                 };
 
                 context.Products.Add(newProduct);
-
                 context.SaveChanges();
             }
         }
@@ -59,11 +59,6 @@ namespace EntityFrameworkIntro.Repositories
         {
             using (var context = _factory.Create())
             {
-               // var products = context.Products.Where(e => e.Id == product.Id).ToList();
-
-               // return products.Select(i => new Product { Id = i.Id, Name = i.Name, Description = i.Description, Weight = i.Weight, 
-                 //                                           Height = i.Height, Width = i.Width, Length = i.Length });
-
                 return context.Products.ToList();
             }
         }

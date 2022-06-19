@@ -10,14 +10,9 @@ namespace EntityFrameworkIntro.Interfaces
     public interface IProductRepository
     {
         void AddProduct(Product product);
-
         Product GetProduct(int id);
-
         IEnumerable<Product> GetAll();
-
         void DeleteProduct(Product product);
-
         void DeleteProduct(int id);
     }
-
 }

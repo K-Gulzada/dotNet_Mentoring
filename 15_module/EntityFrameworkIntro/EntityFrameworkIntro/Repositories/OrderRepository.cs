@@ -5,7 +5,6 @@ namespace EntityFrameworkIntro.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
-
         private readonly IDbContextFactory _factory;
 
         public OrderRepository(IDbContextFactory factory)
@@ -25,7 +24,6 @@ namespace EntityFrameworkIntro.Repositories
                 };
 
                 context.Orders.Add(newOrder);
-
                 context.SaveChanges();
             }
         }
