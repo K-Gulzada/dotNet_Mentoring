@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace AdoNetFundamentals.Repositories
 {
-    public class ProductRepository:IProductRepository
+    public class ProductRepository : IProductRepository
     {
         public List<Product> GetAllProducts()
         {
@@ -23,12 +23,9 @@ namespace AdoNetFundamentals.Repositories
 
                 if (data.HasRows)
                 {
-                    Console.WriteLine($"{data.GetName(0)} \t | \t {data.GetName(1)} \t | \t {data.GetName(2)} \t | \t {data.GetName(3)}  \t | \t {data.GetName(4)} \t | \t {data.GetName(5)}");
-
                     while (data.Read())
                     {
-                        Console.WriteLine($"{data.GetValue(0)} \t | \t {data.GetValue(1)}  \t | \t {data.GetValue(2)}  \t | \t {data.GetValue(3)}  \t | \t {data.GetValue(4)}  \t | \t {data.GetValue(5)}");
-                        var product = new Product(data.GetValue(0).ToString(), data.GetValue(1).ToString(), Convert.ToSingle(data.GetValue(2)), Convert.ToSingle(data.GetValue(3)), Convert.ToSingle(data.GetValue(4)), Convert.ToSingle(data.GetValue(5)));
+                        var product = new Product(data["Name"].ToString(), data["Description"].ToString(), Convert.ToSingle(data["Weight"]), Convert.ToSingle(data["Height"]), Convert.ToSingle(data["Width"]), Convert.ToSingle(data["Length"]));
                         products.Add(product);
                     }
                 }
@@ -92,12 +89,9 @@ namespace AdoNetFundamentals.Repositories
 
                 if (data.HasRows)
                 {
-                    Console.WriteLine($"{data.GetName(0)} \t | \t {data.GetName(1)} \t | \t {data.GetName(2)} \t | \t {data.GetName(3)}  \t | \t {data.GetName(4)} \t | \t {data.GetName(5)}");
-
                     while (data.Read())
                     {
-                        Console.WriteLine($"{data.GetValue(0)} \t | \t {data.GetValue(1)}  \t | \t {data.GetValue(2)}  \t | \t {data.GetValue(3)}  \t | \t {data.GetValue(4)}  \t | \t {data.GetValue(5)}");
-                        product = new Product(data.GetValue(0).ToString(), data.GetValue(1).ToString(), Convert.ToSingle(data.GetValue(2)), Convert.ToSingle(data.GetValue(3)), Convert.ToSingle(data.GetValue(4)), Convert.ToSingle(data.GetValue(5)));
+                        product = new Product(data["Name"].ToString(), data["Description"].ToString(), Convert.ToSingle(data["Weight"]), Convert.ToSingle(data["Height"]), Convert.ToSingle(data["Width"]), Convert.ToSingle(data["Length"]));
                     }
                 }
 

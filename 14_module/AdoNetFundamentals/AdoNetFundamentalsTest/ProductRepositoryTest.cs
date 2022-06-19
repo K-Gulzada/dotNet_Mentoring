@@ -22,6 +22,8 @@ namespace AdoNetFundamentalsTest
         {
             List<Product> products = new List<Product> { new Product("Test Name", "Test Description", 34, 234, 654, 123) };
             var result = _productRepository.Setup(x => x.GetAllProducts()).Returns(products);
+            OrderRepository order = new OrderRepository();
+            order.GetAllOrders();
             Assert.IsNotNull(result);
         }
 

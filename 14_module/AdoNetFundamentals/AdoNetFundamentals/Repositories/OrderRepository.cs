@@ -23,14 +23,11 @@ namespace AdoNetFundamentals.Repositories
 
                 if (data.HasRows)
                 {
-                    Console.WriteLine($"{data.GetName(1)} \t | \t {data.GetName(2)} \t | \t {data.GetName(3)} \t | \t {data.GetName(4)}");
-
                     while (data.Read())
                     {
-                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data.GetValue(3).ToString());
+                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data["Status"].ToString());
 
-                        Console.WriteLine($"{data.GetValue(1)} \t | \t {data.GetValue(2)} \t | \t {data.GetValue(3)}  \t | \t {data.GetValue(4)}");
-                        var order = new Order(Convert.ToDateTime(data.GetValue(1)), Convert.ToDateTime(data.GetValue(2)), status, Convert.ToInt32(data.GetValue(4)));
+                        var order = new Order(Convert.ToDateTime(data["CreatedDate"]), Convert.ToDateTime(data["UpdatedDate"]), status, Convert.ToInt32(data["ProductId"]));
                         orders.Add(order);
                     }
                 }
@@ -121,14 +118,11 @@ namespace AdoNetFundamentals.Repositories
 
                 if (data.HasRows)
                 {
-                    Console.WriteLine($"{data.GetName(1)} \t | \t {data.GetName(2)} \t | \t {data.GetName(3)} \t | \t {data.GetName(4)}");
-
                     while (data.Read())
                     {
-                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data.GetValue(3).ToString());
+                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data["Status"].ToString());
 
-                        Console.WriteLine($"{data.GetValue(1)} \t | \t {data.GetValue(2)} \t | \t {data.GetValue(3)}  \t | \t {data.GetValue(4)}");
-                        var order = new Order(Convert.ToDateTime(data.GetValue(1)), Convert.ToDateTime(data.GetValue(2)), status, Convert.ToInt32(data.GetValue(4)));
+                        var order = new Order(Convert.ToDateTime(data["CreatedDate"]), Convert.ToDateTime(data["UpdatedDate"]), status, Convert.ToInt32(data["ProductId"]));
                         orders.Add(order);
                     }
                 }
@@ -156,14 +150,11 @@ namespace AdoNetFundamentals.Repositories
 
                 if (data.HasRows)
                 {
-                    Console.WriteLine($"{data.GetName(1)} \t | \t {data.GetName(2)} \t | \t {data.GetName(3)} \t | \t {data.GetName(4)}");
-
                     while (data.Read())
                     {
-                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data.GetValue(3).ToString());
+                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data["Status"].ToString());
 
-                        Console.WriteLine($"{data.GetValue(1)} \t | \t {data.GetValue(2)} \t | \t {data.GetValue(3)}  \t | \t {data.GetValue(4)}");
-                        var order = new Order(Convert.ToDateTime(data.GetValue(1)), Convert.ToDateTime(data.GetValue(2)), status, Convert.ToInt32(data.GetValue(4)));
+                        var order = new Order(Convert.ToDateTime(data["CreatedDate"]), Convert.ToDateTime(data["UpdatedDate"]), status, Convert.ToInt32(data["ProductId"]));
                         orders.Add(order);
                     }
                 }
@@ -193,16 +184,11 @@ namespace AdoNetFundamentals.Repositories
 
             foreach (DataTable dt in data.Tables)
             {
-                foreach (DataColumn column in dt.Columns)
-                {
-                    Console.Write($" \t {column}");
-                }
-                Console.WriteLine();
                 foreach (DataRow row in dt.Rows)
                 {
-                    var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == row[4].ToString());
-                    Console.WriteLine($" \t {row[0]} \t {row[1]} \t \t {row[2]} \t \t {row[3]} \t \t {row[4]}");
-                    var order = new Order(Convert.ToDateTime(row[1]), Convert.ToDateTime(row[2]), status, Convert.ToInt32(row[4]));
+                    var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == row["Status"].ToString());
+
+                    var order = new Order(Convert.ToDateTime(row["CreatedDate"]), Convert.ToDateTime(row["UpdatedDate"]), status, Convert.ToInt32(row["ProductId"]));
                     orders.Add(order);
                 }
             }
