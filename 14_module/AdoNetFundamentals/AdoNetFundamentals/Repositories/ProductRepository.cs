@@ -1,4 +1,5 @@
 ﻿using AdoNetFundamentals.Entities;
+using AdoNetFundamentals.Known_Params;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -25,7 +26,9 @@ namespace AdoNetFundamentals.Repositories
                 {
                     while (data.Read())
                     {
-                        var product = new Product(data["Name"].ToString(), data["Description"].ToString(), Convert.ToSingle(data["Weight"]), Convert.ToSingle(data["Height"]), Convert.ToSingle(data["Width"]), Convert.ToSingle(data["Length"]));
+                        var product = new Product(data[KnownParams.Name].ToString(), data[KnownParams.Description].ToString(),
+                                                  Convert.ToSingle(data[KnownParams.Weight]), Convert.ToSingle(data[KnownParams.Height]),
+                                                  Convert.ToSingle(data[KnownParams.Width]), Convert.ToSingle(data[KnownParams.Length]));
                         products.Add(product);
                     }
                 }
@@ -91,7 +94,9 @@ namespace AdoNetFundamentals.Repositories
                 {
                     while (data.Read())
                     {
-                        product = new Product(data["Name"].ToString(), data["Description"].ToString(), Convert.ToSingle(data["Weight"]), Convert.ToSingle(data["Height"]), Convert.ToSingle(data["Width"]), Convert.ToSingle(data["Length"]));
+                        product = new Product(data[KnownParams.Name].ToString(), data[KnownParams.Description].ToString(),
+                                                  Convert.ToSingle(data[KnownParams.Weight]), Convert.ToSingle(data[KnownParams.Height]),
+                                                  Convert.ToSingle(data[KnownParams.Width]), Convert.ToSingle(data[KnownParams.Length]));
                     }
                 }
 

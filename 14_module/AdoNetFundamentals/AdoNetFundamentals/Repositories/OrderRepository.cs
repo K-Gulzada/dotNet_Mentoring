@@ -1,4 +1,5 @@
 ﻿using AdoNetFundamentals.Entities;
+using AdoNetFundamentals.Known_Params;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -25,9 +26,9 @@ namespace AdoNetFundamentals.Repositories
                 {
                     while (data.Read())
                     {
-                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data["Status"].ToString());
+                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data[KnownParams.Status].ToString());
 
-                        var order = new Order(Convert.ToDateTime(data["CreatedDate"]), Convert.ToDateTime(data["UpdatedDate"]), status, Convert.ToInt32(data["ProductId"]));
+                        var order = new Order(Convert.ToDateTime(data[KnownParams.CreatedDate]), Convert.ToDateTime(data[KnownParams.UpdatedDate]), status, Convert.ToInt32(data[KnownParams.ProductId]));
                         orders.Add(order);
                     }
                 }
@@ -120,9 +121,9 @@ namespace AdoNetFundamentals.Repositories
                 {
                     while (data.Read())
                     {
-                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data["Status"].ToString());
+                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data[KnownParams.Status].ToString());
 
-                        var order = new Order(Convert.ToDateTime(data["CreatedDate"]), Convert.ToDateTime(data["UpdatedDate"]), status, Convert.ToInt32(data["ProductId"]));
+                        var order = new Order(Convert.ToDateTime(data[KnownParams.CreatedDate]), Convert.ToDateTime(data[KnownParams.UpdatedDate]), status, Convert.ToInt32(data[KnownParams.ProductId]));
                         orders.Add(order);
                     }
                 }
@@ -152,9 +153,9 @@ namespace AdoNetFundamentals.Repositories
                 {
                     while (data.Read())
                     {
-                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data["Status"].ToString());
+                        var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == data[KnownParams.Status].ToString());
 
-                        var order = new Order(Convert.ToDateTime(data["CreatedDate"]), Convert.ToDateTime(data["UpdatedDate"]), status, Convert.ToInt32(data["ProductId"]));
+                        var order = new Order(Convert.ToDateTime(data[KnownParams.CreatedDate]), Convert.ToDateTime(data[KnownParams.UpdatedDate]), status, Convert.ToInt32(data[KnownParams.ProductId]));
                         orders.Add(order);
                     }
                 }
@@ -186,9 +187,9 @@ namespace AdoNetFundamentals.Repositories
             {
                 foreach (DataRow row in dt.Rows)
                 {
-                    var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == row["Status"].ToString());
+                    var status = Enum.GetValues(typeof(Status)).Cast<Status>().SingleOrDefault(x => x.ToString() == row[KnownParams.Status].ToString());
 
-                    var order = new Order(Convert.ToDateTime(row["CreatedDate"]), Convert.ToDateTime(row["UpdatedDate"]), status, Convert.ToInt32(row["ProductId"]));
+                    var order = new Order(Convert.ToDateTime(row[KnownParams.CreatedDate]), Convert.ToDateTime(row[KnownParams.UpdatedDate]), status, Convert.ToInt32(row[KnownParams.ProductId]));
                     orders.Add(order);
                 }
             }
