@@ -1,0 +1,101 @@
+﻿@using BusinessLayer.DTO
+@*@model ReflectionIT.Mvc.Paging.PagingList<Product>
+@using ReflectionIT.Mvc.Paging
+@addTagHelper *,ReflectionIT.Mvc.Paging*@
+
+@model List<Product>
+
+@*@{
+    ViewData["Title"] = "ProductListAndSearch";
+}
+@section Scripts{
+    <script src="~/js/product.js"></script>
+}*@
+
+<h1 class="forFlexDisplay">Product Page</h1>
+
+
+<div class="container mb-5">
+
+   
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+        </script>
+    }
+
+    <form asp-action="ProductList" method="get">
+        <p>
+            <b> Search By: </b>
+            @Html.RadioButton("searchBy", "id") <text class="rightMargin25">Product ID</text>
+            @Html.RadioButton("searchBy", "name") <text class="rightMargin25">Product Name</text>           
+
+        </p>
+        <br />
+        <p>
+            <input type="search"
+                   placeholder="Search Product..."
+                   name="searchProduct"
+                   class="width400" />
+            <input type="submit" value="Search" class="btn btn-primary leftMargin15" />
+
+            <a class="btn btn-primary leftMargin15" asp-action="ProductList">Get All Products</a>
+            <a class="btn btn-primary leftMargin15" asp-action="AddNewProduct">Add New Product</a>            
+
+        </p>
+    </form>
+
+    <table border="1" class="table">
+        <thead>
+            <tr>
+                @*<th scope="col">ID</th>*@
+                <th scope="col">Name</th>
+                <th scope="col">Quantity Per Unit</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Units In Stock</th>
+                <th scope="col">Units On Order</th>
+                <th scope="col">Reorder Level</th>
+                <th scope="col">Discontinued</th>
+                <th scope="col">Category</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr class="user">
+
+                     @*   <td>
+                            @Html.ActionLink(@item.ProductID, "UpdateProduct", "Product", new { productId = item.ProductID })
+                        </td>*@
+                        <td>@item.ProductName</td>
+                        <td>@item.QuantityPerUnit</td>
+                        <td>@item.UnitPrice</td>
+                        <td>@item.UnitsInStock</td>
+                        <td>@item.UnitsOnOrder</td>
+                        <td>@item.ReorderLevel</td>
+                        <td>@item.Discontinued</td>
+                        <td>@item.Category.CategoryName</td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+
+
+    <nav aria-label="nav example">
+        @if (this.Model != null)
+        {
+            @await this.Component.InvokeAsync("Pager", new { pagingList = this.Model })
+            //<vc:pager paging-list="@Model" />
+        }
+
+    </nav>
+
+</div>
