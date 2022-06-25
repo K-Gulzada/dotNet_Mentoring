@@ -1,0 +1,47 @@
+﻿@using BusinessLayer.DTO
+@model Product
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-3">
+            <h1>Add New Product</h1>
+
+            <form action="/Product/AddNewProduct" method="post" enctype="multipart/form-data">
+
+                <div>
+                    Product Name: @Html.TextBoxFor(x => x.ProductName, new { Class = "form-control" })
+                </div>
+                <div>
+                    QuantityPerUnit: @Html.TextBoxFor(x => x.QuantityPerUnit, new { Class = "form-control" })
+                </div>
+                <div>
+                    UnitPrice: @Html.TextBoxFor(x => x.UnitPrice, new { Class = "form-control", type="Number" })
+                </div>
+                <div>
+                    UnitsInStock: @Html.TextBoxFor(x => x.UnitsInStock, new { Class = "form-control", type="Number", min=0 })
+                </div>
+                <div>
+                    UnitsOnOrder: @Html.TextBoxFor(x => x.UnitsOnOrder, new { Class = "form-control", type="Number", min=0 })
+                </div>
+                <div>
+                    ReorderLevel: @Html.TextBoxFor(x => x.ReorderLevel, new { Class = "form-control", type="Number", min=0 })
+                </div>
+                <div>
+                    Discontinued: @Html.TextBoxFor(x => x.Discontinued, new { Class = "form-control", type="Number", max=1, min=0 })
+                </div>
+                <div>
+                    Category:
+                    <select asp-for="Category.CategoryName" class="form-control" asp-items="ViewBag.CategoryNames"><option>Category</option></select>
+                </div>
+
+
+
+                <div>
+                    <input class="btn btn-primary" style="margin-top:15px;" type="submit" value="Submit" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

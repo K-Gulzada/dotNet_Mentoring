@@ -5,12 +5,16 @@
 
 @model List<Product>
 
-@*@{
-    ViewData["Title"] = "ProductListAndSearch";
-}
+
 @section Scripts{
     <script src="~/js/product.js"></script>
-}*@
+}
+
+<style>
+    li{
+        margin: 0 10px;
+    }
+</style>
 
 <h1 class="forFlexDisplay">Product Page</h1>
 
@@ -27,26 +31,7 @@
         </script>
     }
 
-    <form asp-action="ProductList" method="get">
-        <p>
-            <b> Search By: </b>
-            @Html.RadioButton("searchBy", "id") <text class="rightMargin25">Product ID</text>
-            @Html.RadioButton("searchBy", "name") <text class="rightMargin25">Product Name</text>           
-
-        </p>
-        <br />
-        <p>
-            <input type="search"
-                   placeholder="Search Product..."
-                   name="searchProduct"
-                   class="width400" />
-            <input type="submit" value="Search" class="btn btn-primary leftMargin15" />
-
-            <a class="btn btn-primary leftMargin15" asp-action="ProductList">Get All Products</a>
-            <a class="btn btn-primary leftMargin15" asp-action="AddNewProduct">Add New Product</a>            
-
-        </p>
-    </form>
+   <a class="btn btn-primary" asp-controller="Product" asp-action="AddNewProduct">Add New Product</a>
 
     <table border="1" class="table">
         <thead>
@@ -68,7 +53,7 @@
             {
                 @foreach (var item in Model)
                 {
-                    <tr class="user">
+                    <tr class="productLine">
 
                      @*   <td>
                             @Html.ActionLink(@item.ProductID, "UpdateProduct", "Product", new { productId = item.ProductID })
@@ -81,6 +66,13 @@
                         <td>@item.ReorderLevel</td>
                         <td>@item.Discontinued</td>
                         <td>@item.Category.CategoryName</td>
+                         <td>
+                            <button class="btn btn-warning edit">@Html.ActionLink("Update", "Update", "Product", new { productId = item.ProductID })</button>
+                        </td>
+
+                        <td>
+                            <input class="btn btn-danger deleteProduct" data-name="@item.ProductID" type="button" value="Delete" />
+                        </td>
                     </tr>
                 }
             }

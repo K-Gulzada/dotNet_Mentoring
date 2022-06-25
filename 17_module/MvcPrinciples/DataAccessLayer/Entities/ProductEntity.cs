@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace DataAccessLayer.Entities
 {
@@ -19,13 +14,12 @@ namespace DataAccessLayer.Entities
         public decimal UnitPrice { get; set; }
         public short UnitsInStock { get; set; }
         public short UnitsOnOrder { get; set; }
-        public short ReorderLevel { get; set; }  // smallInt => ?? short?? 
+        public short ReorderLevel { get; set; }
         [Required]
-        public bool Discontinued { get; set; }  // bit => ??
+        public bool Discontinued { get; set; }
         public int SupplierID { get; set; }
         public int CategoryID { get; set; }
-        public SupplierEntity Supplier { get; set; }
-        public CategoryEntity Category { get; set; }
-
+        public virtual SupplierEntity Supplier { get; set; }
+        public virtual CategoryEntity Category { get; set; }
     }
 }

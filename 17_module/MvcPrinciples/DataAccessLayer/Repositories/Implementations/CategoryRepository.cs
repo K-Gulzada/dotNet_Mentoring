@@ -44,9 +44,7 @@ namespace DataAccessLayer.Repositories.Implementations
 
         public void Create(CategoryEntity item)
         {
-
             _dbContext.Categories.Add(item);
-            // _dbContext.SaveChanges();
         }
 
         public bool Delete(int id)
@@ -59,7 +57,6 @@ namespace DataAccessLayer.Repositories.Implementations
             }
 
             _dbContext.Categories.Remove(category);
-            //  _dbContext.SaveChanges();
 
             return true;
         }
@@ -69,8 +66,6 @@ namespace DataAccessLayer.Repositories.Implementations
             if (category.CategoryID > 0)
             {
                 _dbContext.Entry(category).State = EntityState.Modified;
-                // _dbContext.Update(category);
-                //_dbContext.SaveChanges();
             }
         }
     }

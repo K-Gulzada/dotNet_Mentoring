@@ -1,0 +1,54 @@
+﻿@using BusinessLayer.DTO
+@model Product
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-3">
+            <h1>Edit Product Data</h1>
+
+            <form action="/Product/Update" method="post" enctype="multipart/form-data">
+                <div>
+                    @Html.HiddenFor(model => model.ProductID)
+                </div>
+
+                <div>
+                    Product Name: @Html.TextBoxFor(x => x.ProductName, new { @Value = Model.ProductName, @readonly = true, Class = "form-control" })
+                </div>
+                <div>
+                    QuantityPerUnit: @Html.TextBoxFor(x => x.QuantityPerUnit, new { @Value = Model.QuantityPerUnit, Class = "form-control" })
+                </div>
+                <div>
+                    UnitPrice: @Html.TextBoxFor(x => x.UnitPrice, new { @Value = Model.UnitPrice, Class = "form-control"})
+                </div>
+                <div>
+                    UnitsInStock: @Html.TextBoxFor(x => x.UnitsInStock, new { @Value = Model.UnitsInStock, Class = "form-control", type="Number" })
+                </div>
+                <div>
+                    UnitsOnOrder: @Html.TextBoxFor(x => x.UnitsOnOrder, new { @Value = Model.UnitsOnOrder, Class = "form-control", type="Number" })
+                </div>
+                <div>
+                    ReorderLevel: @Html.TextBoxFor(x => x.ReorderLevel, new { @Value = Model.ReorderLevel, Class = "form-control", type="Number" })
+                </div>
+                <div>
+                    Category:
+                    <select asp-for="Category.CategoryName" class="form-control" asp-items="ViewBag.CategoryNames"><option>@Model.Category.CategoryName</option></select>
+                </div>
+
+                 <div>
+                    Supplier:
+                      @Html.HiddenFor(model => model.Supplier)
+                          @Html.HiddenFor(model => model.SupplierID)
+                  
+                </div>
+
+
+
+                <div>
+                    <input class="btn btn-primary" style="margin-top:15px;" type="submit" value="Save Changes" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

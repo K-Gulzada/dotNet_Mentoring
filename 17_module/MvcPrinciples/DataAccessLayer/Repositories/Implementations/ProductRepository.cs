@@ -46,19 +46,19 @@ namespace DataAccessLayer.Repositories.Implementations
         public void Create(ProductEntity product)
         {
             _dbContext.Products.Add(product);
-            //  _dbContext.SaveChanges();
         }
 
         public bool Delete(int id)
         {
             var product = _dbContext.Products.SingleOrDefault(x => x.ProductID == id);
+
             if (product == null)
             {
                 return false;
             }
 
             _dbContext.Remove(product);
-            //   _dbContext.SaveChanges();
+
             return true;
         }
 
@@ -67,8 +67,6 @@ namespace DataAccessLayer.Repositories.Implementations
             if (product.ProductID > 0)
             {
                 _dbContext.Entry(product).State = EntityState.Modified;
-                //_dbContext.Update(product);
-                //_dbContext.SaveChanges();
             }
         }
     }

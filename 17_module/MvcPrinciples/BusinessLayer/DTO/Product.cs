@@ -14,13 +14,12 @@ namespace BusinessLayer.DTO
         public decimal UnitPrice { get; set; }
         public short UnitsInStock { get; set; }
         public short UnitsOnOrder { get; set; }
-        public short ReorderLevel { get; set; }  // smallInt => ?? short?? 
+        public short ReorderLevel { get; set; }
         [Required]
-        public byte Discontinued { get; set; }  // bit => ??
+        public byte Discontinued { get; set; }
         public int SupplierID { get; set; }
         public int CategoryID { get; set; }
-        public Supplier Supplier { get; set; }
-        public Category Category { get; set; }
-
+        public virtual Supplier Supplier { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

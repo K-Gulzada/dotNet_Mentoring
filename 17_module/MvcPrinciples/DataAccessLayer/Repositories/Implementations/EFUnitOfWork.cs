@@ -10,9 +10,9 @@ namespace DataAccessLayer.Repositories.Implementations
         private CategoryRepository categoryRepository;
         private ProductRepository productRepository;
 
-        public EFUnitOfWork()
+        public EFUnitOfWork(NorthwindDbContext dbContext)
         {
-            _dbContext = new NorthwindDbContext();
+            _dbContext = dbContext;
         }
         public IRepository<CategoryEntity> Categories
         {

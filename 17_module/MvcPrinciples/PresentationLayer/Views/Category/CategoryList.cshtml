@@ -1,0 +1,64 @@
+﻿@using BusinessLayer.DTO
+@model ReflectionIT.Mvc.Paging.PagingList<Category>
+@using ReflectionIT.Mvc.Paging
+@addTagHelper *,ReflectionIT.Mvc.Paging
+
+<style>
+    li{
+        margin: 0 10px;
+    }
+</style>
+
+<h1 class="forFlexDisplay">Category Page</h1>
+
+
+<div class="container mb-5">
+
+   
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+        </script>
+    }
+
+    <table border="1" class="table">
+        <thead>
+            <tr>
+                @*<th scope="col">ID</th>*@
+                <th scope="col">Category ID </th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>@item.CategoryID</td>
+                        <td>@item.CategoryName</td>
+                        <td>@item.Description</td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+
+
+    <nav aria-label="nav example">
+        @if (this.Model != null)
+        {
+            @await this.Component.InvokeAsync("Pager", new { pagingList = this.Model })
+            //<vc:pager paging-list="@Model" />
+        }
+
+    </nav>
+
+</div>
